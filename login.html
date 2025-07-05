@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Login Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Petit+Formal+Script&family=Playball&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0faff;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+            max-width: 1000px;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Left Section: Travel Image with Taj Mahal */
+        .left {
+            flex: 1;
+            background: url('download.jpeg') no-repeat center center/cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.4); /* Overlay for better contrast */
+        }
+
+        .text-box {
+            text-align: center;
+            z-index: 2;
+        }
+
+        .text-box h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .text-box p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Right Section: Login Form */
+        .right {
+            flex: 1;
+            background: #fff url('plane.png') no-repeat top right;
+            background-size: 60%; /* Adjust size for image pattern */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            position: relative; /* To position bottom images */
+        }
+
+        .right h2 {
+            font-size: 2rem;
+            color: #0078ff;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 100%;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            outline: none;
+            box-sizing: border-box;
+
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0078ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        .form-footer {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .form-footer a {
+            color: #0078ff;
+            text-decoration: none;
+        }
+
+        /* Icon Strip */
+        .icon-strip {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .icon-strip img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        /* Bottom City Skyline */
+        .skyline {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        .skyline img {
+            width: 80%;
+            opacity: 0.7;
+        }
+
+        /* Bottom Left and Right Images */
+        .bottom-left-image, .bottom-right-image {
+            position: absolute;
+            bottom: 20px;
+            width: 80px; /* Adjust size */
+        }
+
+        .bottom-left-image {
+            left: 10px; /* Position to the left */
+        }
+
+        .bottom-right-image {
+            right: 10px; /* Position to the right */
+        }
+        .corinthia-regular {
+  font-family: "Corinthia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.corinthia-bold {
+  font-family: "Corinthia", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Section: Taj Mahal Image -->
+        <div class="left">
+            <div class="text-box">
+                <h1 style="font-family: corinthia;font-size: xxxx-large;">OceanBound Travels</h1>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Travel is the only purchase that enriches you beyond material wealth.</p>
+            </div>
+        </div>
+
+        <!-- Right Section: Login Form -->
+        <div class="right">
+            <h2>Welcome</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div class="icon-strip">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111393.png" alt="Facebook">
+                <img src="https://cdn-icons-png.flaticon.com/512/281/281764.png" alt="Google">
+            </div>
+            <div class="form-footer">
+                Don't have an account? <a href="#">Register Now</a>
+            </div>
+
+            <!-- Bottom Left and Right Images -->
+            <img src="tm.png" class="bottom-left-image" alt="Left Image">
+            <img src="pil.png" class="bottom-right-image" alt="Right Image">
+        </div>
+    </div>
+</body>
+</html>

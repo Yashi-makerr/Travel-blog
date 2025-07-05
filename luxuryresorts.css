@@ -1,0 +1,763 @@
+div{
+    text-align: center;
+}
+.black-heading
+{
+    color: black;
+}
+/* General styles for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Modal content container */
+.modal-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+    font-size: 1.8rem;
+    margin: 20px 0 10px;
+    color: #222;
+    text-align: center;
+}
+
+/* Links in headings */
+h1 a {
+    text-decoration: none;
+    color: #ff6600;
+    transition: color 0.3s;
+}
+
+h1 a:hover {
+    color: #cc5200;
+}
+
+/* Gallery images */
+.gallery-img {
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Paragraphs for location links */
+p {
+    text-align: center;
+    margin: 10px 0 40px;
+}
+
+/* Location links */
+p a {
+    color: #0073e6;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+p a:hover {
+    color: #005bb5;
+}
+
+/* Divider between sections */
+.divider {
+    height: 2px;
+    background-color: #ff6600;
+    margin: 40px 0;
+    border-radius: 2px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-img {
+        height: auto;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+/* General styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f); /* Gradient background */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Modal content container */
+.modal-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    margin: 20px 0 10px;
+    color: #222;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add depth to headings */
+}
+
+/* Links in headings */
+h1 a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+h1 a:hover {
+    color: #e64a19;
+    text-shadow: 0 0 5px #ff6600; /* Glow effect */
+}
+
+/* Gallery images */
+.gallery-img {
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+/* Paragraphs for location links */
+p {
+    text-align: center;
+    margin: 10px 0 40px;
+}
+
+/* Location links styled as buttons */
+p a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #0073e6;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+p a:hover {
+    background-color: #005bb5;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Glow effect */
+}
+
+/* Section Divider */
+.divider {
+    height: 3px;
+    background: linear-gradient(to right, #ff6600, #ffb347); /* Gradient line */
+    margin: 40px 0;
+    border-radius: 2px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-img {
+        height: auto;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+/* General styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f); /* Gradient background */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Adding a subtle animated background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 90%);
+    animation: shimmer 5s infinite linear;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%); }
+    100% { transform: translateX(100%) translateY(100%); }
+}
+
+/* Custom cursor */
+body {
+    cursor: url('https://img.icons8.com/emoji/24/sparkles-emoji.png'), auto;
+}
+
+/* Modal content container */
+.modal-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    margin: 20px 0 10px;
+    color: #222;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Links in headings */
+h1 a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+h1 a:hover {
+    color: #e64a19;
+    text-shadow: 0 0 10px #ff6600; /* Glow effect */
+}
+
+/* Gallery images */
+.gallery-img {
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: slideUp 1.2s ease-out;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Paragraphs for location links */
+p {
+    text-align: center;
+    margin: 10px 0 40px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Location links styled as buttons */
+p a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #0073e6;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+p a:hover {
+    background-color: #005bb5;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba(0, 123, 230, 0.6); }
+    to { box-shadow: 0 0 20px rgba(0, 123, 230, 0.9); }
+}
+
+/* Section Divider */
+.divider {
+    height: 3px;
+    background: linear-gradient(to right, #ff6600, #ffb347);
+    margin: 40px 0;
+    border-radius: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating Scroll-to-Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: none;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#scrollToTop:hover {
+    transform: scale(1.2);
+    background-color: #e64a19;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-img {
+        height: auto;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    #scrollToTop {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2rem;
+    }
+}
+/* General styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f); /* Gradient background */
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Adding a subtle animated background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 90%);
+    animation: shimmer 5s infinite linear;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%); }
+    100% { transform: translateX(100%) translateY(100%); }
+}
+
+/* Custom cursor */
+body {
+    cursor: url('https://img.icons8.com/emoji/24/sparkles-emoji.png'), auto;
+}
+
+/* Modal content container */
+.modal-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    margin: 20px 0 10px;
+    color: #222;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+/* Links in headings */
+h1 a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+h1 a:hover {
+    color: #e64a19;
+    text-shadow: 0 0 10px #ff6600; /* Glow effect */
+}
+
+/* Gallery images */
+.gallery-img {
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: slideUp 1.2s ease-out;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Paragraphs for location links */
+p {
+    text-align: center;
+    margin: 10px 0 40px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Location links styled as buttons */
+p a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #0073e6;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+p a:hover {
+    background-color: #005bb5;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba(0, 123, 230, 0.6); }
+    to { box-shadow: 0 0 20px rgba(0, 123, 230, 0.9); }
+}
+
+/* Section Divider */
+.divider {
+    height: 3px;
+    background: linear-gradient(to right, #ff6600, #ffb347);
+    margin: 40px 0;
+    border-radius: 2px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating Scroll-to-Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: none;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#scrollToTop:hover {
+    transform: scale(1.2);
+    background-color: #e64a19;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-img {
+        height: auto;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    #scrollToTop {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2rem;
+    }
+}
+/* General styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffecd2, #fcb69f);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Subtle animated background shimmer */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 90%);
+    animation: shimmer 8s infinite linear;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%); }
+    100% { transform: translateX(100%) translateY(100%); }
+}
+
+/* Modal content container */
+.modal-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeInZoom 1.5s ease-out; /* Entrance animation */
+}
+
+@keyframes fadeInZoom {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5rem;
+    margin: 20px 0 10px;
+    color: #222;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 1.5s ease-out;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Links in headings */
+h1 a {
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+h1 a:hover {
+    color: #e64a19;
+    text-shadow: 0 0 10px #ff6600; /* Glow effect */
+}
+
+/* Gallery images */
+.gallery-img {
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slideInFromRight 1s ease-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05) rotate(2deg); /* Adds a playful rotation on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes slideInFromRight {
+    0% { opacity: 0; transform: translateX(100px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Paragraphs for location links */
+p {
+    text-align: center;
+    margin: 10px 0 40px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Location links styled as buttons */
+p a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #0073e6;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    animation: pulse 2s infinite;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+p a:hover {
+    background-color: #005bb5;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Section Divider */
+.divider {
+    height: 3px;
+    background: linear-gradient(to right, #ff6600, #ffb347);
+    margin: 40px 0;
+    border-radius: 2px;
+    animation: growWidth 1s ease-in-out;
+}
+
+@keyframes growWidth {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+/* Floating Scroll-to-Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #ff6600;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: none;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#scrollToTop:hover {
+    transform: scale(1.2);
+    background-color: #e64a19;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-img {
+        height: auto;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    #scrollToTop {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2rem;
+    }
+}
+

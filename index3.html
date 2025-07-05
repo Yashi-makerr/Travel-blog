@@ -14,19 +14,30 @@
   <body>
     <nav>
       <div class="nav__logo"><a href="#">OceanBound Travels</a></div>
-      <ul class="nav__links">
-        <li class="link"><a href="gh.html">Home</a></li>
+      <!-- <ul class="nav__links">
+        <li>Home</li>
         <li class="link"><a href="journey_container">Blog</a></li>
         <li class="link"><a href="">Offers</a></li>
         <li class="link"><a href="">Services</a></li>
         <li class="link"><a href="">Contact Us</a></li>
         <li class="link"><a href="">Login</a></li>
         <li class="link"><a href="">Sign up</a></li>
+      </ul> -->
+      <ul class="nav__links">
+        <li><a href="#Home"><strong>Home</strong></a></li>
+        <li><a href="#journey_container">Blog</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <!-- <div class="contact-section" id="contact"></div> -->
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+        <li><a href="upload.html">Uploads</a></li>
       </ul>
+      
     </nav>
     
     <header>
-      <div class="section__container">
+      <div class="section__container" id="Home">
         <div class="header__content">
           <h1>Travel</h1>
           <p>
@@ -35,16 +46,15 @@
             beaches to cultural wonders, we've got you covered with our
             comprehensive travel guides and insider tips.
           </p>
-          <button>Read more</button>
         </div>
       </div>
     </header>
 
-    <section class="journey__container" id="journey__container">
-      <div class="section__container">
+    <section class="journey__container" id="journey_container">
+      <div class="section__container" >
         <h2 class="section__title">Start Your Journey</h2>
         <p class="section__subtitle">The most searched countries in March</p>
-        <div class="journey__grid">
+        <div class="journey__grid" >
           <div class="country__card">
             <img src="country-1.jpg" alt="country" />
             <div class="country__name">
@@ -88,47 +98,37 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      
+    
     
     <!-- Adventure Section -->
+     <div class="background" >
+     
     <div class="category-header" id="adventure">
       <h2>Adventure Travel</h2>
     </div>
     <div class="category-content">
       <div class="category-item">
         <img src="mountain climbing.webp" alt="Mountain Climbing">
-        <h3>Mountain Climbing</h3>
+        <h3><a href="mountain_climbing.html">Mountain Climbing</a></h3>
         <p>Experience the thrill of mountain peaks worldwide.</p>
         <div class="gallery-container">
-          <img src="img-thumbnail.jpg" alt="Click to view gallery" id="mainImage">
+          
           <div id="imageModal-adventure" class="modal">
             <span class="close">&times;</span>
-            <div class="modal-content">
-              <img src="mounteve.jpg" class="gallery-img" alt="Image 1">
-              <img src="mountfuji.jpg" class="gallery-img" alt="Image 2">
-              <img src="lonavala.jpg" class="gallery-img" alt="Image 3">
-              <img src="tigerhill.jpg" class="gallery-img" alt="Image 4">
-              <img src="kanchen.jpg" class="gallery-img" alt="Image 5">
-            </div>
+            
           </div>
         </div>
       </div>
       <div class="category-item">
         <img src="scuba diving.webp" alt="Scuba Diving">
-        <h3>Scuba Diving</h3>
+        <h3><a href="scuba_diving.html">Scuba Diving</a></h3>
         <p>Explore the underwater world full of adventure.</p>
         <div class="gallery-container">
-          <img src="img-thumbnail.jpg" alt="Click to view gallery" id="mainImage">
+          
           <div id="imageModal-scuba" class="modal">
             <span class="close">&times;</span>
-            <div class="modal-content">
-              <img src="Alhambra, Spain.jpg" class="gallery-img" alt="Image 1">
-              <img src="Galapagos Islands, Ecuador.webp" class="gallery-img" alt="Image 2">
-              <img src="SS Thistlegorm Wreck, Egyptian Red Sea.jpg" class="gallery-img" alt="Image 3">
-              <img src="richelieu rock thiland.jpg" class="gallery-img" alt="Image 4">
-              <img src="Great barrier reef.jpg" class="gallery-img" alt="Image 5">
-            </div>
+            
           </div>
         </div>
       </div>
@@ -141,37 +141,27 @@
     <div class="category-content">
       <div class="category-item">
         <img src="luxury resorts.webp" alt="Luxury Resort">
-        <h3>Luxury Resorts</h3>
+        <h3><a href="luxaryresorts.html">Luxary resorts</a></h3>
         <p>Relax in the most luxurious resorts around the globe.</p>
+        
         <div class="gallery-container">
-          <img src="img-thumbnail.jpg" alt="Click to view gallery" id="mainImage">
+          
           <div id="imageModal-luxury" class="modal">
             <span class="close">&times;</span>
-            <div class="modal-content">
-              <img src="Petra, Jordan.jpg" class="gallery-img" alt="Image 1">
-              <img src="maldives.webp" class="gallery-img" alt="Image 2">
-              <img src="giza egypt.jpg" class="gallery-img" alt="Image 3">
-              <img src="Colosseum, Italy.jpg" class="gallery-img" alt="Image 4">
-              <img src="richelieu rock thailand.jpg" class="gallery-img" alt="Image 5">
-            </div>
+            
           </div>
         </div>
       </div>
+    
       <div class="category-item">
         <img src="private jets.png" alt="Private Jets">
-        <h3>Private Jets</h3>
+        <h3><a href="privatejets.html">Private Jets</a></h3>
         <p>Travel in style with private jets and exclusive services.</p>
         <div class="gallery-container">
-          <img src="img-thumbnail.jpg" alt="Click to view gallery" id="mainImage">
+          
           <div id="imageModal-jets" class="modal">
             <span class="close">&times;</span>
-            <div class="modal-content">
-              <img src="jet1.jpg" class="gallery-img" alt="Image 1">
-              <img src="jet2.jpg" class="gallery-img" alt="Image 2">
-              <img src="jet3.jpg" class="gallery-img" alt="Image 3">
-              <img src="jet4.jpg" class="gallery-img" alt="Image 4">
-              <img src="jet5.jpg" class="gallery-img" alt="Image 5">
-            </div>
+            
           </div>
         </div>
       </div>
@@ -184,77 +174,81 @@
     <div class="category-content">
       <div class="category-item">
         <img src="historic sites.jpg" alt="Historic Sites">
-        <h3>Historic Sites</h3>
+        <h3><a href="historicsites.html">Historic Sites</a></h3>
         <p>Discover ancient landmarks and their fascinating stories.</p>
         <div class="gallery-container">
-          <img src="img-thumbnail.jpg" alt="Click to view gallery" id="mainImage">
+          
           <div id="imageModal-historic" class="modal">
             <span class="close">&times;</span>
-            <div class="modal-content">
-              <img src="giza egypt.jpg" class="gallery-img" alt="Image 1">
-              <img src="Colosseum, Italy.jpg" class="gallery-img" alt="Image 2">
-              <img src="hist3.jpg" class="gallery-img" alt="Image 3">
-              <img src="hist4.jpg" class="gallery-img" alt="Image 4">
-              <img src="hist5.jpg" class="gallery-img" alt="Image 5">
-            </div>
+            
           </div>
         </div>
       </div>
       <div class="category-item">
         <img src="local festivals.jpg" alt="Local Festivals">
-        <h3>Local Festivals</h3>
+        <h3><a href="localfestivals.html">Local Festivals</a></h3>
         <p>Immerse yourself in vibrant cultural celebrations.</p>
         <div class="gallery-container">
-          <img src="img-thumbnail.jpg" alt="Click to view gallery" id="mainImage">
+          
           <div id="imageModal-festivals" class="modal">
             <span class="close">&times;</span>
-            <div class="modal-content">
-              <img src="fest1.jpg" class="gallery-img" alt="Image 1">
-              <img src="fest2.jpg" class="gallery-img" alt="Image 2">
-              <img src="fest3.jpg" class="gallery-img" alt="Image 3">
-              <img src="fest4.jpg" class="gallery-img" alt="Image 4">
-              <img src="fest5.jpg" class="gallery-img" alt="Image 5">
-            </div>
+           
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+</div>
+</section>
 
     <!-- Banner Section -->
+
     <section class="banner__container">
       <div class="section__container">
-        <div class="banner__content">
+        <div class="banner__content" id="offers">
+          
+          
           <h2>Discount 10-30% Off</h2>
           <p>
             Travel the world on a budget with our unbeatable discounted travel
             packages. Limited time offers!
           </p>
-          <button>Learn more</button>
+          <a href="#discounts"><button>Learn more</button></a>
         </div>
       </div>
     </section>
+
+
+    <!-- Testimonial Section -->
+<section class="testimonial">
+  <div class="section__container">
+    <h2>What Our Travelers Say</h2>
+    <div class="testimonial__cards">
+      <div class="testimonial__card">
+        <p>"OceanBound Travels gave me the best vacation of my life!"</p>
+        <h4>- Alex P.</h4>
+      </div>
+      <div class="testimonial__card">
+        <p>"Highly recommend their luxury packages!"</p>
+        <h4>- Samantha R.</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
 
     <!-- About Us Page -->
     <div class="about-section" id="about">
       <h2>About Us</h2>
 ceptional travel blog experience. Each of us brings a unique set of skills, creativity, and enthusiasm to this project.<br> Here’s a bit about the team behind the vision:      <p>We are a dynamic team of passionate creators and innovators committed to delivering an ex
-          <br>
-          <br>
-        <br><strong>Yashi Kesarwani – The Visionary Designer</strong><br>
-        
-      
-        
-        <br><strong>Siddhi Gupta – The Content Curator</strong><br>
-        
-        <br><strong>
-
-        <br><strong>Shreya Gupta – The Analytical Thinker</strong><br>
-        
-        
-        <br><strong>Vaishnavi Sahu – The Innovator</strong><br>
-         
-      
-          <br>
+          
+        <br><strong>Yashi Kesarwani – The Visionary Designer</strong>
+        <br><strong>Siddhi Gupta – The Artistic Leader</strong>
+        <br><strong>Shreya Gupta – The Analytical Thinker</strong>
+        <br><strong>Vaishnavi Sahu – The Innovator</strong>
+        <br>
         Our Mission:</strong>
         We aim to inspire travelers to embrace the world’s diverse cultures, breathtaking adventures, and luxurious escapes. This project is not just about travel; it’s about connecting people to experiences that matter.
          <br><strong>
@@ -265,7 +259,7 @@ ceptional travel blog experience. Each of us brings a unique set of skills, crea
   <!-- Contact Us Page -->
   <div class="contact-section" id="contact">
     <h2>Contact Us</h2>
-    <form action="#">
+    <form action="#thank-you">
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
         <textarea placeholder="Your Message" rows="4" required></textarea>

@@ -1,0 +1,110 @@
+.gallery-img {
+    position: relative;
+    min-height: 300px;
+    width: 50%;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading 1 Styling */
+.h1 {
+    text-align: center;
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-size: 4em; /* Larger heading size */
+    font-weight: 900;
+    color: #003366;
+    margin: 30px 0;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading 2 Styling */
+.h2 {
+    font-size: 2em; /* Larger size for better visibility */
+    color: #006666;
+    font-family: 'Lora', serif; /* Stylish serif font */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Div Styling */
+div {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Black Heading Class */
+.black-heading {
+    color: black;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+}
+
+/* Body Styling */
+body {
+    background-image: linear-gradient(120deg, #8beaf7, #57acd1); /* Light blue and sea green gradient */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Buttons (if needed) */
+button {
+    background-color: #0ED2F7;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #627070;
+    transform: scale(1.1);
+}
+
+/* Link Styling */
+a {
+    color: #88d7e6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #d75566;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .gallery-img {
+        width: 90%;
+    }
+
+    .h1 {
+        font-size: 3em;
+    }
+
+    .h2 {
+        font-size: 1.5em;
+    }
+}

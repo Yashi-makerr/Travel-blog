@@ -19,3 +19,11 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+const modals = document.querySelectorAll('.modal');
+modals.forEach((modal) => {
+  modal.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal')) {
+      modal.style.display = 'none';
+    }
+  });
+});

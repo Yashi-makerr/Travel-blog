@@ -21,6 +21,7 @@
   padding: 5rem 1rem;
   max-width: var(--max-width);
   margin: auto;
+  
 }
 
 .section__title {
@@ -52,12 +53,16 @@ nav {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  padding: 2rem 1rem;
+  padding: 3rem 6rem;
   width: 100%;
-  max-width: var(--max-width);
+  /* max-width: var(--max-width); */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position:fixed;
+  height: 40px;
+  width: 100%;
+  background-color: #282d31;
 }
 
 .nav__logo a {
@@ -519,3 +524,13 @@ footer p {
   border-color: #aaa;
 }
 
+button {
+  cursor: pointer; /* Makes it look clickable */
+}
+
+a button {
+  text-decoration: none; /* Removes underline from button inside anchor tag */
+}
+.nav__links a {
+  color: var(--extra-light);
+}
