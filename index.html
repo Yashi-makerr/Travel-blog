@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style3.css" />
+    <title>Web Design Mastery | Travel.co</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__logo"><a href="#">OceanBound Travels</a></div>
+      <!-- <ul class="nav__links">
+        <li>Home</li>
+        <li class="link"><a href="journey_container">Blog</a></li>
+        <li class="link"><a href="">Offers</a></li>
+        <li class="link"><a href="">Services</a></li>
+        <li class="link"><a href="">Contact Us</a></li>
+        <li class="link"><a href="">Login</a></li>
+        <li class="link"><a href="">Sign up</a></li>
+      </ul> -->
+      <ul class="nav__links">
+        <li><a href="#Home"><strong>Home</strong></a></li>
+        <li><a href="#journey_container">Blog</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <!-- <div class="contact-section" id="contact"></div> -->
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+        <li><a href="upload.html">Uploads</a></li>
+      </ul>
+      
+    </nav>
+    
+    <header>
+      <div class="section__container" id="Home">
+        <div class="header__content">
+          <h1>Travel</h1>
+          <p>
+            Embark on a journey of a lifetime and explore the world's most
+            breathtaking destinations with our expert travel advice. From exotic
+            beaches to cultural wonders, we've got you covered with our
+            comprehensive travel guides and insider tips.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="journey__container" id="journey_container">
+      <div class="section__container" >
+        <h2 class="section__title">Start Your Journey</h2>
+        <p class="section__subtitle">The most searched countries in March</p>
+        <div class="journey__grid" >
+          <div class="country__card">
+            <img src="country-1.jpg" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Santorini, Greece</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="country-2.jpg" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Vernazza, Italy</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="country-3.jpg" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>San Francisco</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="country-4.jpg" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Navagio, Greece</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="country-5.jpg" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Ao Nang, Thailand</span>
+            </div>
+          </div>
+          <div class="country__card">
+            <img src="country-6.jpg" alt="country" />
+            <div class="country__name">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Phi Phi Island, Thailand</span>
+            </div>
+          </div>
+        </div>
+      
+    
+    
+    <!-- Adventure Section -->
+     <div class="background" >
+     
+    <div class="category-header" id="adventure">
+      <h2>Adventure Travel</h2>
+    </div>
+    <div class="category-content">
+      <div class="category-item">
+        <img src="mountain climbing.webp" alt="Mountain Climbing">
+        <h3><a href="mountain_climbing.html">Mountain Climbing</a></h3>
+        <p>Experience the thrill of mountain peaks worldwide.</p>
+        <div class="gallery-container">
+          
+          <div id="imageModal-adventure" class="modal">
+            <span class="close">&times;</span>
+            
+          </div>
+        </div>
+      </div>
+      <div class="category-item">
+        <img src="scuba diving.webp" alt="Scuba Diving">
+        <h3><a href="scuba_diving.html">Scuba Diving</a></h3>
+        <p>Explore the underwater world full of adventure.</p>
+        <div class="gallery-container">
+          
+          <div id="imageModal-scuba" class="modal">
+            <span class="close">&times;</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Luxury Section -->
+    <div class="category-header" id="luxury">
+      <h2>Luxury Travel</h2>
+    </div>
+    <div class="category-content">
+      <div class="category-item">
+        <img src="luxury resorts.webp" alt="Luxury Resort">
+        <h3><a href="luxaryresorts.html">Luxary resorts</a></h3>
+        <p>Relax in the most luxurious resorts around the globe.</p>
+        
+        <div class="gallery-container">
+          
+          <div id="imageModal-luxury" class="modal">
+            <span class="close">&times;</span>
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="category-item">
+        <img src="private jets.png" alt="Private Jets">
+        <h3><a href="privatejets.html">Private Jets</a></h3>
+        <p>Travel in style with private jets and exclusive services.</p>
+        <div class="gallery-container">
+          
+          <div id="imageModal-jets" class="modal">
+            <span class="close">&times;</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cultural Section -->
+    <div class="category-header" id="cultural">
+      <h2>Cultural Travel</h2>
+    </div>
+    <div class="category-content">
+      <div class="category-item">
+        <img src="historic sites.jpg" alt="Historic Sites">
+        <h3><a href="historicsites.html">Historic Sites</a></h3>
+        <p>Discover ancient landmarks and their fascinating stories.</p>
+        <div class="gallery-container">
+          
+          <div id="imageModal-historic" class="modal">
+            <span class="close">&times;</span>
+            
+          </div>
+        </div>
+      </div>
+      <div class="category-item">
+        <img src="local festivals.jpg" alt="Local Festivals">
+        <h3><a href="localfestivals.html">Local Festivals</a></h3>
+        <p>Immerse yourself in vibrant cultural celebrations.</p>
+        <div class="gallery-container">
+          
+          <div id="imageModal-festivals" class="modal">
+            <span class="close">&times;</span>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+
+    <!-- Banner Section -->
+
+    <section class="banner__container">
+      <div class="section__container">
+        <div class="banner__content" id="offers">
+          
+          
+          <h2>Discount 10-30% Off</h2>
+          <p>
+            Travel the world on a budget with our unbeatable discounted travel
+            packages. Limited time offers!
+          </p>
+          <a href="#discounts"><button>Learn more</button></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Testimonial Section -->
+<section class="testimonial">
+  <div class="section__container">
+    <h2>What Our Travelers Say</h2>
+    <div class="testimonial__cards">
+      <div class="testimonial__card">
+        <p>"OceanBound Travels gave me the best vacation of my life!"</p>
+        <h4>- Alex P.</h4>
+      </div>
+      <div class="testimonial__card">
+        <p>"Highly recommend their luxury packages!"</p>
+        <h4>- Samantha R.</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+
+    <!-- About Us Page -->
+    <div class="about-section" id="about">
+      <h2>About Us</h2>
+ceptional travel blog experience. Each of us brings a unique set of skills, creativity, and enthusiasm to this project.<br> Here’s a bit about the team behind the vision:      <p>We are a dynamic team of passionate creators and innovators committed to delivering an ex
+          
+        <br><strong>Yashi Kesarwani – The Visionary Designer</strong>
+        <br><strong>Siddhi Gupta – The Artistic Leader</strong>
+        <br><strong>Shreya Gupta – The Analytical Thinker</strong>
+        <br><strong>Vaishnavi Sahu – The Innovator</strong>
+        <br>
+        Our Mission:</strong>
+        We aim to inspire travelers to embrace the world’s diverse cultures, breathtaking adventures, and luxurious escapes. This project is not just about travel; it’s about connecting people to experiences that matter.
+         <br><strong>
+        Our Vision:</strong>
+        To create a platform where everyone—be it an adventurer, a cultural enthusiast, or someone seeking luxury—can find curated blogs to inspire their next journey.</p>
+      <p>Join us on our travels and let's discover the world together!</p>
+  </div>
+  <!-- Contact Us Page -->
+  <div class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <form action="#thank-you">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<footer>
+  <div class="section__container">
+    <h4>OceanBound Travels</h4>
+    <div class="social__icons">
+      <span><i class="ri-facebook-fill"></i></span>
+      <span><i class="ri-twitter-fill"></i></span>
+      <span><i class="ri-instagram-line"></i></span>
+      <span><i class="ri-linkedin-fill"></i></span>
+    </div>
+    <p>
+      Travel makes one modest. You see what a tiny place you occupy in the
+      world.
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
