@@ -127,7 +127,7 @@
             } catch (err) {
                 console.error(err);
                 typingBubble.remove();
-                appendMessageBubble("❌ Connection to Travel Assistant failed. Please check if backend server is running on port 5001.", "assistant");
+                appendMessageBubble(`❌ Connection to Travel Assistant failed. Please verify that the backend API server is running and accessible at: ${API_BASE_URL}`, "assistant");
             }
 
             scrollToBottom();
