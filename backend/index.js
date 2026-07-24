@@ -1,3 +1,22 @@
+// Native zero-dependency .env file loader (avoids npm/tar write sync issues on cloud drives)
+const fs = require("fs");
+const path = require("path");
+const envPath = path.join(__dirname, ".env");
+if (fs.existsSync(envPath)) {
+  const envConfig = fs.readFileSync(envPath, "utf-8");
+  envConfig.split(/\r?\n/).forEach((line) => {
+    const trimmedLine = line.trim();
+    if (trimmedLine && !trimmedLine.startsWith("#")) {
+      const firstEqual = trimmedLine.indexOf("=");
+      if (firstEqual > 0) {
+        const key = trimmedLine.slice(0, firstEqual).trim();
+        const value = trimmedLine.slice(firstEqual + 1).trim();
+        process.env[key] = value;
+      }
+    }
+  });
+}
+
 const dns = require("dns");
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
@@ -13,8 +32,12 @@ const aiRoutes = require("./routes/aiRoutes");
 const app = express();
 const PORT = process.env.PORT || 5001;
 
-// MongoDB Connection URI (reads from environment variables on Render, falls back to hardcoded string locally)
-const MONGO_URI = process.env.MONGO_URI || "mongodb+srv://ykesarwani41_db_user:PUqtOfuBFi17dLTT@cluster0.ndbctps.mongodb.net/travel_blog?retryWrites=true&w=majority&appName=Cluster0";
+// MongoDB Connection URI (reads from local .env in development, or Render Environment Variables in production)
+const MONGO_URI = process.env.MONGO_URI;
+if (!MONGO_URI) {
+  console.error("❌ Error: MONGO_URI environment variable is missing.");
+  process.exit(1);
+}
 
 // Middlewares
 app.use(cors());
