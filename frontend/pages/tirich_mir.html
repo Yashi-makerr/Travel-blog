@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tirich Mir (7708m) Travel Package - OceanBound Travels</title>
+    <!-- Prevent caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Google Fonts & Icon Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #669ccb;
+            --primary-dark: #5681a7;
+            --secondary: #e8f1fa;
+            --text-dark: #282d31;
+            --text-light: #5c636a;
+            --white: #ffffff;
+            --border: rgba(102, 156, 203, 0.2);
+            --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--secondary) 0%, #ffffff 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* Navbar Header */
+        header {
+            width: 100%;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            background: linear-gradient(45deg, var(--text-dark), var(--primary-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-actions a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 6px;
+        }
+
+        .nav-actions a:hover,
+        .nav-actions a.active {
+            color: var(--primary-dark);
+            background: rgba(102, 156, 203, 0.1);
+        }
+
+        /* Main Wrapper */
+        .wrapper {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex: 2.3;
+        }
+
+        /* Title Area */
+        .hero-title {
+            margin-bottom: 25px;
+        }
+
+        .hero-title h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .hero-title p {
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Gallery Row */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .gallery-item {
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Navigation Tabs */
+        .details-tabs {
+            display: flex;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 30px;
+            gap: 5px;
+            overflow-x: auto;
+        }
+
+        .tab-button {
+            padding: 12px 25px;
+            border: none;
+            background: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .tab-button:hover {
+            color: var(--primary-dark);
+        }
+
+        .tab-button.active {
+            color: var(--primary-dark);
+        }
+
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 3px 3px 0 0;
+        }
+
+        /* Tab Contents */
+        .tab-content {
+            display: none;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: var(--card-shadow);
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .tab-content h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            border-left: 4px solid var(--primary);
+            padding-left: 12px;
+        }
+
+        .tab-content p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Itinerary Timeline */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            background: var(--secondary);
+            border-radius: 10px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .timeline-day {
+            font-weight: 700;
+            color: var(--primary-dark);
+            min-width: 90px;
+            font-size: 0.95rem;
+        }
+
+        .timeline-desc {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .sidebar-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .sidebar-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .guide-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        .info-row i {
+            color: var(--primary);
+            font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .info-row a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .info-row a:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Booking Inquiry Form */
+        .inquiry-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .inquiry-form input,
+        .inquiry-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            outline: none;
+            background: var(--secondary);
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .inquiry-form input:focus,
+        .inquiry-form textarea:focus {
+            background: var(--white);
+            border-color: var(--primary);
+            box-shadow: 0 0 8px rgba(102, 156, 203, 0.2);
+        }
+
+        .inquiry-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            font-size: 1rem;
+            box-shadow: 0 4px 12px rgba(102, 156, 203, 0.3);
+        }
+
+        .inquiry-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        /* Reviews page components */
+        .review-item {
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+        }
+
+        .review-item:last-child {
+            border-bottom: none;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+
+        .review-user {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .review-rating {
+            color: #ffb800;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            padding: 40px 5%;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: white;
+        }
+
+        /* Map Embed container */
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+            }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .gallery-item {
+                height: 180px;
+            }
+            .hero-title h1 {
+                font-size: 2.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="index.html" class="logo">OceanBound Travels</a>
+        <div class="nav-actions">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="upload.html">Share Story</a>
+        </div>
+    </header>
+
+    <!-- Main Wrapper -->
+    <div class="wrapper">
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="hero-title">
+                <h1>Tirich Mir Expedition (7708m)</h1>
+                <p><i class="fas fa-map-marker-alt"></i> Hindu Kush Range, Chitral, Pakistan</p>
+            </div>
+
+            <!-- Gallery -->
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=80" alt="Tirich Mir Mountain Peak">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=80" alt="Mountain Expedition Crew">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Expedition Base Camp">
+                </div>
+            </div>
+
+            <!-- Detail Tabs Nav -->
+            <div class="details-tabs">
+                <button class="tab-button active" data-tab="detail">Expedition Details</button>
+                <button class="tab-button" data-tab="itinerary">Itinerary</button>
+                <button class="tab-button" data-tab="map">Location Map</button>
+                <button class="tab-button" data-tab="reviews">Reviews</button>
+            </div>
+
+            <!-- Tab Content: Details -->
+            <div class="tab-content active" id="detail">
+                <h2>Expedition Overview</h2>
+                <p>Rising 7,708 meters (25,289 feet) above sea level, <strong>Tirich Mir</strong> is the highest mountain located in the Hindu Kush range and the highest peak outside the Karakoram and Himalayas. It stands as a majestic giant towering over the historic Chitral Valley in northern Pakistan.</p>
+                <p>First conquered in 1950 by a legendary Norwegian team led by philosopher and climber Arne Naess, the peak represents a true mountaineer's challenge. It is characterized by crevasse-ridden glaciers, steep ice walls, and unpredictable mountain weather, requiring sound acclimatization and robust physical endurance.</p>
+                <p>Our guided expedition package provides full logistics support, experienced high-altitude climbing guides, comfortable base camp dining, medical support, and all government-approved climbing clearances. Join us on this once-in-a-lifetime high-altitude adventure!</p>
+            </div>
+
+            <!-- Tab Content: Itinerary -->
+            <div class="tab-content" id="itinerary">
+                <h2>40-Day Expedition Schedule</h2>
+                <p>A meticulous day-by-day plan built for acclimatization safety and optimal summit chances.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="timeline-day">Day 1</span>
+                        <span class="timeline-desc">Arrival in Islamabad international airport, transfer to hotel.</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-day">Day 2</span>
+                        <span class="timeline-desc">Briefing at the Ministry of Tourism & official paperwork registration.</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-day">Day 3</span>
+                        <span class="timeline-desc">Drive along the scenic Lowari Pass routes to Chitral town.</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-day">Day 4</span>
+                        <span class="timeline-desc">Jeep drive through spectacular gorges to Shagrom village (Base Camp trek head).</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-day">Day 5</span>
+                        <span class="timeline-desc">Begin trek. Hike through meadows and boulders to Shemlak campsite.</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-day">Day 6</span>
+                        <span class="timeline-desc">Trek along the glacier moraine to Tirich Mir Base Camp (4,724m).</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-day">Day 7 - 34</span>
+                        <span class="timeline-desc">Climbing window: Acclimatization rotations, load ferry to Camp 1 & 2, and summit attempts.</span>
+                    </div>
+                    <div class="timeline-item">
+                        <span class="timeline-day">Day 35 - 40</span>
+                        <span class="timeline-desc">Trek back to Shagrom, drive back to Islamabad, debriefing, and international flight home.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Map -->
+            <div class="tab-content" id="map">
+                <h2>Expedition Location</h2>
+                <p>Interact with the map below to view the route, campsites, and topography surrounding Tirich Mir in the Hindu Kush range.</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1mGgtylMQHGAKR6HR8r8YLe5W4LU" width="100%" height="450" style="border:none;"></iframe>
+                </div>
+            </div>
+
+            <!-- Tab Content: Reviews -->
+            <div class="tab-content" id="reviews">
+                <h2>Mountaineer Reviews</h2>
+                <div id="reviewsContainer">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="review-user">Jon Halldorson (Norway)</span>
+                            <span class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                        </div>
+                        <p class="comment-content">Incredible logistics from OceanBound. The base camp food was exceptional and the guides were true professionals. Summiting Tirich Mir was a life-changing challenge.</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-header">
+                            <span class="review-user">Marie Dubois (France)</span>
+                            <span class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                        </div>
+                        <p class="comment-content">Tough route with severe weather, but the safety protocols of our guides were exemplary. Acclimatization scheduling was handled beautifully.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Actions & Guide contact -->
+        <div class="sidebar">
+            <div class="sidebar-card">
+                <h3>Talk to our Guides</h3>
+                <div class="guide-info">
+                    <div class="info-row">
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+923474598096">+92 347 4598096</a>
+                    </div>
+                    <div class="info-row">
+                        <i class="fab fa-whatsapp"></i>
+                        <a href="https://wa.me/923474598096" target="_blank">WhatsApp Chat</a>
+                    </div>
+                    <div class="info-row">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@rockvalleytours.com">info@rockvalleytours.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Inquire About Booking</h3>
+                <form class="inquiry-form" id="bookingInquiryForm">
+                    <input type="text" placeholder="Your Name" required id="inqName">
+                    <input type="email" placeholder="Your Email" required id="inqEmail">
+                    <textarea placeholder="Tell us about your mountaineering experience or custom dates..." rows="4" required id="inqMessage"></textarea>
+                    <button type="submit" class="inquiry-btn" id="inqSubmitBtn">Submit Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <span class="footer-logo">OceanBound Travels</span>
+            <span>© 2026 OceanBound Expedition Services. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+    <!-- Tab selection script -->
+    <script>
+        const tabButtons = document.querySelectorAll(".tab-button");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                tabButtons.forEach(btn => btn.classList.remove("active"));
+                tabContents.forEach(content => content.classList.remove("active"));
+
+                button.classList.add("active");
+                const targetTab = button.dataset.tab;
+                document.getElementById(targetTab).classList.add("active");
+            });
+        });
+
+        // Booking inquiry form submission alert
+        document.getElementById("bookingInquiryForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = document.getElementById("inqName").value;
+            alert(`Thank you, ${name}! Your inquiry has been submitted. Our expedition guide will get in touch with you via email shortly. 🚀`);
+            document.getElementById("bookingInquiryForm").reset();
+        });
+    </script>
+</body>
+</html>

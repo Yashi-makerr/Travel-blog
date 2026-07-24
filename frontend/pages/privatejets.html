@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Jets - Luxury Aviation</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playball&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="../css/style3.css">
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color-dark);
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 100px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+        .history-section {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            padding: 35px;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+        .history-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        .history-section p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-medium);
+            margin-bottom: 15px;
+        }
+        .history-section p:last-child {
+            margin-bottom: 0;
+        }
+        .location-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary-color-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(102, 156, 203, 0.15);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .location-link:hover {
+            color: var(--primary-color);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Blobs -->
+    <div class="bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav>
+      <div class="nav__logo"><a href="index.html">OceanBound Travels</a></div>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#journey_container" class="active">Destinations</a></li>
+        <li><a href="index.html#blog-section">Blog</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="section__container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Destinations</a>
+        
+        <h1 class="section__title">Private Jets</h1>
+        <p class="section__subtitle">Experience the pinnacle of personal aviation and absolute comfort</p>
+
+        <!-- History Section -->
+        <section class="history-section">
+            <h3>The History of Private Aviation</h3>
+            <p>
+                The history of private aviation dates back to the early 20th century when wealthy individuals and corporations purchased military aircraft to repurpose them for private travel. In the post-WWII era, civil aviation blossomed, leading to the development of custom-built corporate planes. The milestone that defined modern business aviation occurred in 1963 with the maiden flight of the Learjet 23, the first purpose-built commercial private jet. Learjet established a new paradigm of speed, privacy, and status, forever changing how global executives and VIPs traveled.
+            </p>
+            <p>
+                As technology progressed, companies like Gulfstream, Bombardier, and Cessna introduced larger, longer-range aircraft. Today, private aviation is no longer just about fast travel; it has evolved into a fully-customizable sanctuary in the sky. Featuring advanced aerodynamics, ultra-quiet engines, customizable multi-zone living spaces, satellite internet, and zero-gravity seating, modern private jets represent the intersection of high performance, top-tier engineering, and absolute luxury.
+            </p>
+        </section>
+
+        <!-- Private Jets Grid -->
+        <h2 class="section__title" style="font-size: 2.5rem; margin-bottom: 2rem;">10 World-Class Private Jets</h2>
+        <div class="category-content">
+            <!-- 1. Airbus ACJ neo Range -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Paris%20Le%20Bourget%20Airport%20FBO" target="_blank"><img src="../images/Airbus ACJ neo range.webp" alt="Airbus ACJ neo Range" class="no-modal"></a>
+                <h3>1. Airbus ACJ neo Range</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Range: 6,000 nm | Capacity: 18-25 Passengers</p>
+                <p>The $81 million private jet known as the "TwoTwenty," by Airbus, is an executive version of the popular A220 airliner. Designed to offer three times more cabin volume than traditional business jets, it provides intercontinental range, allowing passengers to fly in an ultra-luxurious apartment in the clouds.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Paris%20Le%20Bourget%20Airport%20FBO" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Paris Le Bourget Airport FBO</a>
+            </div>
+
+            <!-- 2. Embraer Legacy 500 -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Geneva%20Airport%20VIP%20Terminal" target="_blank"><img src="../images/Embraer Legacy 500.webp" alt="Embraer Legacy 500" class="no-modal"></a>
+                <h3>2. Embraer Legacy 500</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Range: 3,125 nm | Capacity: 8-12 Passengers</p>
+                <p>The cabin is elegantly lined with rich leather and custom wood veneer. It is the first in its class to offer the comfort of a flat floor and a stand-up cabin, setting new standards for midsize passenger comfort and featuring advanced fly-by-wire cockpit technology.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Geneva%20Airport%20VIP%20Terminal" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Geneva Airport VIP Terminal</a>
+            </div>
+
+            <!-- 3. Gulfstream G650ER -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Teterboro%20Airport%20FBO" target="_blank"><img src="../images/Gulfstream G650ER.webp" alt="Gulfstream G650ER" class="no-modal"></a>
+                <h3>3. Gulfstream G650ER</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Range: 7,500 nm | Capacity: up to 19 Passengers</p>
+                <p>The G650 and G650ER are two of the most dependable business jets in the world, with hundreds of aircraft in service and more than 120 world speed records. Featuring a spacious cabin with large signature oval windows, it is the ultimate expression of speed and style.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Teterboro%20Airport%20FBO" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Teterboro Airport FBO</a>
+            </div>
+
+            <!-- 4. Bombardier Global 7500 -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=River%20Thames%20VIP%20Helipad%20%2F%20Airport" target="_blank"><img src="../images/Bombardier Global 7500.webp" alt="Bombardier Global 7500" class="no-modal"></a>
+                <h3>4. Bombardier Global 7500</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Range: 7,700 nm | Capacity: up to 19 Passengers</p>
+                <p>The Global 7500, the largest and longest-range private jet in the world, comes with a luxurious interior that features four true living spaces, a full-size kitchen, and a master suite with a permanent bed and stand-up shower.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=River%20Thames%20VIP%20Helipad%20%2F%20Airport" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> River Thames VIP Helipad / Airport</a>
+            </div>
+
+            <!-- 5. HondaJet Elite S -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Rocky%20Mountain%20Metro%20Airport" target="_blank"><img src="../images/HondaJet Elite S.webp" alt="HondaJet Elite S" class="no-modal"></a>
+                <h3>5. HondaJet Elite S</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Range: 1,437 nm | Capacity: 5-7 Passengers</p>
+                <p>Honda showcases this plane as the "World's Most Advanced Light Jet." Its unique Over-The-Wing Engine Mount design dramatically reduces cabin noise, minimizes aerodynamic drag, and maximizes cabin space, making it a masterpiece of light aviation.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Rocky%20Mountain%20Metro%20Airport" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Rocky Mountain Metro Airport</a>
+            </div>
+
+            <!-- 6. Pilatus PC-24 -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Fort%20Lauderdale%20Executive%20FBO" target="_blank"><img src="../images/Pilatus PC-24.webp" alt="Pilatus PC-24" class="no-modal"></a>
+                <h3>6. Pilatus PC-24</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Range: 2,000 nm | Capacity: up to 10 Passengers</p>
+                <p>Known as a true innovator, the Pilatus PC-24 is engineered to perform on short, unpaved runways. It combines the versatility of a turboprop with the cabin size, speed, and comfort of a medium-light business jet.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Fort%20Lauderdale%20Executive%20FBO" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Fort Lauderdale Executive FBO</a>
+            </div>
+
+            <!-- 7. Gulfstream G700 -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Al%20Maktoum%20VIP%20Terminal%20Dubai" target="_blank"><img src="../images/Gulfstream G700.webp" alt="Gulfstream G700" class="no-modal"></a>
+                <h3>7. Gulfstream G700</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Range: 7,500 nm | Capacity: up to 19 Passengers</p>
+                <p>The Gulfstream G700 delivers the most spacious, innovative cabin in the industry, combined with high-thrust Rolls-Royce engines. Its advanced symmetry flight deck and low-cabin altitude optimize wellness and sleep during ultra-long flights.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Al%20Maktoum%20VIP%20Terminal%20Dubai" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Al Maktoum VIP Terminal Dubai</a>
+            </div>
+
+            <!-- 8. Cirrus Vision SF50 -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Van%20Nuys%20Airport%20FBO" target="_blank"><img src="../images/Cirrus Vision SF50.webp" alt="Cirrus Vision SF50" class="no-modal"></a>
+                <h3>8. Cirrus Vision SF50</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Range: 1,275 nm | Capacity: up to 7 Passengers</p>
+                <p>The award-winning Cirrus Vision SF50 Jet ushers in a new era of personal flight. As the world's first single-engine Personal Jet, it is equipped with a revolutionary whole-airframe parachute system and a luxury carbon fiber cabin.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Van%20Nuys%20Airport%20FBO" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Van Nuys Airport FBO</a>
+            </div>
+
+            <!-- 9. Cessna Citation Latitude -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Singapore%20Seletar%20Airport" target="_blank"><img src="../images/Cessna Citation Latitude.webp" alt="Cessna Citation Latitude" class="no-modal"></a>
+                <h3>9. Cessna Citation Latitude</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Range: 2,700 nm | Capacity: up to 9 Passengers</p>
+                <p>The Cessna Citation Latitude is a favorite among corporate jet travelers. It offers a flat floor, an exceptionally quiet cabin, low operating costs, and top-notch cabin entertainment technology, providing an outstanding business class experience.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Singapore%20Seletar%20Airport" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Singapore Seletar Airport</a>
+            </div>
+
+            <!-- 10. Bombardier Challenger 3500 -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Tokyo%20Haneda%20VIP%20Terminal" target="_blank"><img src="../images/Bombardier Challenger 3500.webp" alt="Bombardier Challenger 3500" class="no-modal"></a>
+                <h3>10. Bombardier Challenger 3500</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Range: 3,400 nm | Capacity: up to 10 Passengers</p>
+                <p>Born of a revolutionary vision, the Challenger 3500 updates the iconic super-midsize business jet with eco-designed materials, standard voice-controlled cabin features, and the industry's first zero-gravity seats for maximum comfort during long trips.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Tokyo%20Haneda%20VIP%20Terminal" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tokyo Haneda VIP Terminal</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Compact Footer -->
+    <footer>
+      <div class="footer__container">
+        <h4>OceanBound Travels</h4>
+        <div class="social__icons">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-linkedin-fill"></i></span>
+        </div>
+        <p class="footer-tagline">
+          Travel makes one modest. You see what a tiny place you occupy in the world.
+        </p>
+        <p class="copyright">&copy; 2026 OceanBound Travels. All rights reserved.</p>
+      </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scuba Diving - Deep-Sea Wonders</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playball&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="../css/style3.css">
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color-dark);
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 100px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+        .history-section {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            padding: 35px;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+        .history-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        .history-section p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-medium);
+            margin-bottom: 15px;
+        }
+        .history-section p:last-child {
+            margin-bottom: 0;
+        }
+        .location-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary-color-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(102, 156, 203, 0.15);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .location-link:hover {
+            color: var(--primary-color);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Blobs -->
+    <div class="bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav>
+      <div class="nav__logo"><a href="index.html">OceanBound Travels</a></div>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#journey_container" class="active">Destinations</a></li>
+        <li><a href="index.html#blog-section">Blog</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="section__container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Destinations</a>
+        
+        <h1 class="section__title">Scuba Diving</h1>
+        <p class="section__subtitle">Exploring the mysteries of the deep blue sea</p>
+
+        <!-- History Section -->
+        <section class="history-section">
+            <h3>The History of Scuba Diving</h3>
+            <p>
+                The human urge to explore the underwater world dates back thousands of years, starting with simple reed breathing tubes and sponge divers. In the 16th century, diving bells were developed to trap pocketed air under the water, allowing longer stays. By the 19th century, heavy surface-supplied copper diving helmets and suits were utilized for salvage operations, though they restricted a diver's movement completely.
+            </p>
+            <p>
+                The true revolution occurred in 1943 during World War II, when naval officer Jacques-Yves Cousteau and engineer Émile Gagnan co-invented the "Aqua-Lung." This open-circuit demand valve system allowed divers to swim freely without surface hoses, carrying compressed air cylinders on their backs. This landmark invention marked the birth of SCUBA (Self-Contained Underwater Breathing Apparatus) diving. Today, scuba diving is both a popular recreational sport and a critical scientific tool, offering access to beautiful coral gardens, historic shipwrecks, and diverse marine life.
+            </p>
+        </section>
+
+        <!-- Diving Destinations Grid -->
+        <h2 class="section__title" style="font-size: 2.5rem; margin-bottom: 2rem;">The 10 Best Scuba Diving Sites in the World</h2>
+        <div class="category-content">
+            <!-- 1. Great Barrier Reef -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Great%20Barrier%20Reef%2C%20Australia" target="_blank"><img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=800&q=80" alt="Great Barrier Reef" class="no-modal"></a>
+                <h3>1. Great Barrier Reef, Australia</h3>
+                <p>The Great Barrier Reef is the world's largest coral reef system, composed of over 2,900 individual reefs stretching along Queensland's coast. It is home to thousands of marine species, including colorful coral gardens, sea turtles, manta rays, and reef sharks. Divers can experience crystal-clear visibility and explore iconic spots like the Ribbon Reefs and Cod Hole.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Great%20Barrier%20Reef%2C%20Australia" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 2. The Great Blue Hole -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Great%20Blue%20Hole%2C%20Belize" target="_blank"><img src="https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&w=800&q=80" alt="Great Blue Hole" class="no-modal"></a>
+                <h3>2. Great Blue Hole, Belize</h3>
+                <p>The Great Blue Hole is a giant marine sinkhole off the coast of Belize, made famous by Jacques Cousteau. Measuring 300 meters across and 124 meters deep, it features deep, clear blue waters and massive submerged stalactites and stalagmites. Divers navigating these depths can encounter nurse sharks, reef sharks, and impressive geological formations.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Great%20Blue%20Hole%2C%20Belize" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 3. Galapagos Islands -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Galapagos%20Islands%2C%20Ecuador" target="_blank"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Galapagos Islands" class="no-modal"></a>
+                <h3>3. Galapagos Islands, Ecuador</h3>
+                <p>The Galapagos Islands sit at the confluence of three ocean currents, creating a unique hotspot for large pelagic marine life. Famous for scuba diving at Darwin and Wolf Islands, it offers once-in-a-lifetime encounters with hammerhead sharks, whale sharks, playful sea lions, marine iguanas, and penguins in their natural habitats.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Galapagos%20Islands%2C%20Ecuador" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 4. Raja Ampat -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Raja%20Ampat%20Islands%2C%20Indonesia" target="_blank"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Raja Ampat Reef" class="no-modal"></a>
+                <h3>4. Raja Ampat Islands, Indonesia</h3>
+                <p>Raja Ampat is located at the heart of the Coral Triangle in West Papua, boasting the highest marine biodiversity recorded on Earth. It hosts over 1,500 species of fish and 75% of all known coral species. Divers are treated to healthy reefs overflowing with schooling fish, pygmy seahorses, and wobbegong sharks.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Raja%20Ampat%20Islands%2C%20Indonesia" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 5. The Red Sea -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Sharm%20El%20Sheikh%2C%20Egypt" target="_blank"><img src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=800&q=80" alt="Red Sea Coral" class="no-modal"></a>
+                <h3>5. Sharm El Sheikh, Egypt</h3>
+                <p>Sharm El Sheikh on the Red Sea offers warm waters, exceptional visibility, and beautiful coral structures. Key dive sites like Ras Mohammed National Park and the SS Thistlegorm shipwreck present a diverse mix of reef walls, vertical drop-offs, historic WWII cargo wreckage, and schools of barracuda or jackfish.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sharm%20El%20Sheikh%2C%20Egypt" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 6. Sipadan Island -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Barracuda%20Point%2C%20Malaysia" target="_blank"><img src="https://images.unsplash.com/photo-1502791451862-7bd8c1df43a7?auto=format&fit=crop&w=800&q=80" alt="Sipadan Dive" class="no-modal"></a>
+                <h3>6. Barracuda Point, Malaysia</h3>
+                <p>Barracuda Point is located off Sipadan Island in the Celebes Sea. It is world-renowned for its high concentrations of sea turtles and a massive swirling vortex of thousands of chevron barracudas. The dive starts along a vertical wall dropping 600 meters, opening up to a plateau active with reef sharks and jacks.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Barracuda%20Point%2C%20Malaysia" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 7. Silfra Fissure -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Silfra%20Fissure%2C%20Iceland" target="_blank"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Silfra Fissure Iceland" class="no-modal"></a>
+                <h3>7. Silfra Fissure, Iceland</h3>
+                <p>Silfra is a rift valley located in Þingvellir National Park, situated directly between the Eurasian and North American tectonic plates. Fed by glacial meltwater filtered through volcanic lava, it boasts some of the clearest water in the world, with visibility exceeding 100 meters. The cold water dive offers a unique geological experience.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Silfra%20Fissure%2C%20Iceland" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 8. Cocos Island -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Cocos%20Island%2C%20Costa%20Rica" target="_blank"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Cocos Island Sharks" class="no-modal"></a>
+                <h3>8. Cocos Island, Costa Rica</h3>
+                <p>Cocos Island is an uninhabited national park located 550 kilometers off Costa Rica's Pacific coast. Accessible only by liveaboard dive boats, it is celebrated for its deep water and strong currents, attracting massive schools of scalloped hammerhead sharks, marble rays, and sailfish.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Cocos%20Island%2C%20Costa%20Rica" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 9. Cenotes of Yucatan -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Cenotes%20of%20Yucatan%2C%20Mexico" target="_blank"><img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=800&q=80" alt="Yucatan Cenotes" class="no-modal"></a>
+                <h3>9. Cenotes of Yucatan, Mexico</h3>
+                <p>The Yucatan Peninsula of Mexico features thousands of cenotes—flooded freshwater sinkholes connecting massive underground cave systems. Divers can experience the thrill of cavern diving in crystal-clear fresh water, witnessing stunning stalactites, haloclines, and shafts of sunlight filtering through the jungle ceiling.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Cenotes%20of%20Yucatan%2C%20Mexico" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 10. Tubbataha Reefs -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Tubbataha%20Reefs%2C%20Philippines" target="_blank"><img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&q=80" alt="Tubbataha Reefs" class="no-modal"></a>
+                <h3>10. Tubbataha Reefs, Philippines</h3>
+                <p>Tubbataha Reefs Natural Park is a protected UNESCO site in the middle of the Sulu Sea. Comprising two massive atolls, it features pristine coral walls, massive gorgonian sea fans, and a high density of marine predators. Divers regularly see white-tip reef sharks, gray reef sharks, manta rays, and green sea turtles.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Tubbataha%20Reefs%2C%20Philippines" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Compact Footer -->
+    <footer>
+      <div class="footer__container">
+        <h4>OceanBound Travels</h4>
+        <div class="social__icons">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-linkedin-fill"></i></span>
+        </div>
+        <p class="footer-tagline">
+          Travel makes one modest. You see what a tiny place you occupy in the world.
+        </p>
+        <p class="copyright">&copy; 2026 OceanBound Travels. All rights reserved.</p>
+      </div>
+    </footer>
+</body>
+</html>

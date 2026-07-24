@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Story - OceanBound Travels</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #0088ff;
+            --primary-hover: #0066cc;
+            --border-glass: rgba(255, 255, 255, 0.18);
+            --bg-dark: rgba(10, 25, 47, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, rgba(0, 4, 40, 0.8), rgba(0, 78, 146, 0.8)), 
+                        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") no-repeat center center/cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Nav Header styling */
+        .header-nav {
+            width: 100%;
+            max-width: 700px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .header-nav .logo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+        }
+
+        .header-nav .nav-actions a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .header-nav .nav-actions a:hover {
+            color: var(--primary);
+        }
+
+        .header-nav .logout-btn {
+            background: rgba(239, 68, 68, 0.2);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            padding: 5px 12px;
+            border-radius: 6px;
+            color: #ef4444 !important;
+            font-weight: 600 !important;
+            transition: all 0.3s !important;
+        }
+
+        .header-nav .logout-btn:hover {
+            background: rgba(239, 68, 68, 0.35);
+            color: #ff6b6b !important;
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+        }
+
+        /* Container */
+        .upload-container {
+            width: 100%;
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--border-glass);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            color: #fff;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .form-header h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ffffff, #88c6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .form-header p {
+            color: #cbd5e0;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        .upload-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .form-group label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #b0c4de;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .form-group label i {
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            font-size: 1rem;
+            padding: 12px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            outline: none;
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #a0aec0;
+            opacity: 0.8;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 0 10px rgba(0, 136, 255, 0.3);
+        }
+
+        .form-group select option {
+            background-color: #0b1528;
+            color: white;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        /* File Upload input custom styling */
+        .file-upload-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            border: 2px dashed rgba(255, 255, 255, 0.25);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-wrapper:hover {
+            border-color: var(--primary);
+            background: rgba(0, 136, 255, 0.08);
+        }
+
+        .file-upload-wrapper i {
+            font-size: 2rem;
+            color: #cbd5e0;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        .file-upload-wrapper:hover i {
+            color: var(--primary);
+        }
+
+        .file-upload-wrapper span {
+            font-size: 0.9rem;
+            color: #cbd5e0;
+        }
+
+        .file-upload-wrapper input[type="file"] {
+            position: absolute;
+            left: 0; top: 0; width: 100%; height: 100%;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .preview-img-container {
+            display: none;
+            width: 100%;
+            max-height: 250px;
+            margin-top: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .preview-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            font-size: 1.1rem;
+            background: linear-gradient(135deg, #0088ff, #0055ff);
+            color: #fff;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0, 136, 255, 0.4);
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 136, 255, 0.6);
+            background: linear-gradient(135deg, #0099ff, #0066ff);
+        }
+
+        .submit-btn:disabled {
+            background: rgba(255, 255, 255, 0.15);
+            color: rgba(255, 255, 255, 0.4);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Custom Toast notification */
+        .toast {
+            position: fixed;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
+            padding: 12px 25px;
+            border-radius: 8px;
+            color: white;
+            font-weight: 500;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            white-space: nowrap;
+        }
+
+        .toast.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast.success { background: #10b981; border: 1px solid #059669; }
+        .toast.error { background: #ef4444; border: 1px solid #dc2626; }
+
+        @media (max-width: 768px) {
+            .upload-container {
+                padding: 25px;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .form-header h1 {
+                font-size: 2.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Toast Message -->
+    <div id="uploadToast" class="toast"></div>
+
+    <!-- Header Navigation bar -->
+    <div class="header-nav">
+        <a href="index.html" class="logo">OceanBound Travels</a>
+        <div class="nav-actions">
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="#" class="logout-btn" id="logoutBtn">Logout</a>
+        </div>
+    </div>
+
+    <!-- Upload Form Container -->
+    <div class="upload-container">
+        <div class="form-header">
+            <h1><i class="fas fa-plane-departure"></i> Share Your Story</h1>
+            <p>Inspire others by uploading your travel adventures to our community blog!</p>
+        </div>
+        
+        <form class="upload-form" id="storyForm">
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Loading your name..." required readonly>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="dob"><i class="fas fa-calendar-alt"></i> Date of Birth</label>
+                    <input type="date" id="dob" name="dob">
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender"><i class="fas fa-venus-mars"></i> Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="" disabled selected>Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="story"><i class="fas fa-pen-nib"></i> Your Travel Story</label>
+                <textarea id="story" name="story" rows="6" placeholder="Describe your destination, the experience, local cuisine, advice, etc..." required></textarea>
+            </div>
+
+            <!-- AI Story Analyzer Button & Display -->
+            <div class="ai-analysis-btn-container" style="display: flex; gap: 15px; align-items: center; margin-top: -10px;">
+                <button type="button" class="submit-btn" id="aiAnalyzeBtn" style="background: linear-gradient(135deg, #8b5cf6, #6d28d9); box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4); margin-top: 0; padding: 10px 18px; font-size: 0.95rem;">
+                    <i class="fas fa-brain"></i> Analyze with Local ML AI
+                </button>
+                <span id="aiStatusText" style="font-size: 0.9rem; color: #b0c4de;">Ready to analyze story</span>
+            </div>
+
+            <!-- AI Insights Box -->
+            <div id="aiInsightsBox" style="display: none; background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.25); border-radius: 12px; padding: 20px; animation: slideUp 0.4s ease-out; margin-top: 10px; margin-bottom: 10px;">
+                <h3 style="font-size: 1.1rem; color: #a78bfa; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-magic"></i> Local NLP AI Insights
+                </h3>
+                <div style="margin-bottom: 12px;">
+                    <strong style="color: #cbd5e0; font-size: 0.9rem;">Naive Bayes Category Classification:</strong>
+                    <div id="aiCategoryTag" style="display: inline-block; background: #7c3aed; padding: 3px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-left: 8px; color: white;">Wanderlust</div>
+                </div>
+                <div style="margin-bottom: 12px;">
+                    <strong style="color: #cbd5e0; font-size: 0.9rem;">Extractive Summary (Sentence Ranking):</strong>
+                    <p id="aiSummaryText" style="font-size: 0.95rem; color: #e2e8f0; margin-top: 5px; font-style: italic; line-height: 1.5;"></p>
+                </div>
+                <div>
+                    <strong style="color: #cbd5e0; font-size: 0.9rem;">Auto-Generated Tags (TF Keywords):</strong>
+                    <div id="aiTagsContainer" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px;"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label><i class="fas fa-image"></i> Destination Photo</label>
+                <div class="file-upload-wrapper" id="fileUploadWrapper">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span id="fileUploadText">Click here or drag & drop to choose a picture</span>
+                    <input type="file" id="photo" name="photo" accept="image/*" required>
+                </div>
+                <div class="preview-img-container" id="previewContainer">
+                    <img id="previewImage" src="" alt="Selected Photo Preview">
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn" id="submitBtn">
+                <i class="fas fa-paper-plane"></i> Share Story
+            </button>
+        </form>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script>
+        const toast = document.getElementById("uploadToast");
+        const form = document.getElementById("storyForm");
+        const photoInput = document.getElementById("photo");
+        const previewContainer = document.getElementById("previewContainer");
+        const previewImage = document.getElementById("previewImage");
+        const fileUploadText = document.getElementById("fileUploadText");
+        const logoutBtn = document.getElementById("logoutBtn");
+        const nameInput = document.getElementById("name");
+        const submitBtn = document.getElementById("submitBtn");
+
+        // Helper: Show toast message
+        function showToast(message, type = "success") {
+            toast.textContent = message;
+            toast.className = `toast show ${type}`;
+            setTimeout(() => {
+                toast.classList.remove("show");
+            }, 3500);
+        }
+
+        // 🔐 AUTH GUARD: Enforce Login Check
+        const loggedUser = JSON.parse(localStorage.getItem("user"));
+        if (!loggedUser) {
+            showToast("Please log in to access this page. Redirecting...", "error");
+            setTimeout(() => {
+                window.location.href = "login.html";
+            }, 1800);
+        } else {
+            // Auto populate user's name
+            nameInput.value = loggedUser.name;
+        }
+
+        // Handle logout
+        logoutBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            localStorage.removeItem("user");
+            showToast("Logged out successfully! Redirecting...", "success");
+            setTimeout(() => {
+                window.location.href = "login.html";
+            }, 1200);
+        });
+
+        // 📸 Handle file selection & preview + reading file name
+        photoInput.addEventListener("change", (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                fileUploadText.textContent = `Selected: ${file.name}`;
+                
+                // Show visual preview
+                const reader = new FileReader();
+                reader.onload = (event) => {
+                    previewImage.src = event.target.result;
+                    previewContainer.style.display = "block";
+                };
+                reader.readAsDataURL(file);
+            } else {
+                fileUploadText.textContent = "Click here or drag & drop to choose a picture";
+                previewContainer.style.display = "none";
+                previewImage.src = "";
+            }
+        });
+
+        // 🧠 AI Story Analyzer API Call & UI Handler
+        const aiAnalyzeBtn = document.getElementById("aiAnalyzeBtn");
+        const aiStatusText = document.getElementById("aiStatusText");
+        const aiInsightsBox = document.getElementById("aiInsightsBox");
+        const aiCategoryTag = document.getElementById("aiCategoryTag");
+        const aiSummaryText = document.getElementById("aiSummaryText");
+        const aiTagsContainer = document.getElementById("aiTagsContainer");
+
+        let aiAnalysisResult = null;
+
+        aiAnalyzeBtn.addEventListener("click", async () => {
+            const story = document.getElementById("story").value.trim();
+            if (!story) {
+                showToast("Please enter a travel story first to run AI analysis.", "error");
+                return;
+            }
+
+            aiAnalyzeBtn.disabled = true;
+            aiAnalyzeBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Analyzing...`;
+            aiStatusText.textContent = "AI model calculating probabilities...";
+
+            try {
+                const res = await fetch(`${API_BASE_URL}/api/stories/analyze`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ story })
+                });
+                
+                const data = await res.json();
+                if (!res.ok || !data.success) {
+                    showToast("AI analysis failed.", "error");
+                    aiStatusText.textContent = "Analysis failed";
+                } else {
+                    aiAnalysisResult = data.data;
+                    
+                    // Show insights
+                    aiCategoryTag.textContent = aiAnalysisResult.category;
+                    aiSummaryText.textContent = `"${aiAnalysisResult.summary}"`;
+                    
+                    // Populate tags
+                    aiTagsContainer.innerHTML = '';
+                    aiAnalysisResult.tags.forEach(tag => {
+                        const span = document.createElement("span");
+                        span.style.cssText = "background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); padding: 3px 10px; border-radius: 6px; font-size: 0.85rem; color: #e2e8f0;";
+                        span.textContent = `#${tag}`;
+                        aiTagsContainer.appendChild(span);
+                    });
+
+                    aiInsightsBox.style.display = "block";
+                    aiStatusText.textContent = "Analysis complete! 🧠";
+                    showToast("AI Analysis complete!", "success");
+                }
+            } catch (err) {
+                console.error(err);
+                showToast("Error connecting to AI service.", "error");
+                aiStatusText.textContent = "Connection error";
+            } finally {
+                aiAnalyzeBtn.disabled = false;
+                aiAnalyzeBtn.innerHTML = `<i class="fas fa-brain"></i> Re-Analyze Story`;
+            }
+        });
+
+        // 📤 Form Submit with Base64 Conversion
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const name = nameInput.value.trim();
+            const dob = document.getElementById("dob").value;
+            const gender = document.getElementById("gender").value;
+            const story = document.getElementById("story").value.trim();
+            const file = photoInput.files[0];
+
+            if (!file) {
+                showToast("Please select a destination photo.", "error");
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Submitting Story...`;
+
+            // Read the image file as a Base64 Data URL
+            const reader = new FileReader();
+            reader.onloadend = async () => {
+                const base64Image = reader.result;
+
+                const payload = {
+                    name,
+                    dob: dob || undefined,
+                    gender: gender || undefined,
+                    story,
+                    imageUrl: base64Image,
+                    aiSummary: aiAnalysisResult ? aiAnalysisResult.summary : undefined,
+                    aiCategory: aiAnalysisResult ? aiAnalysisResult.category : undefined,
+                    aiTags: aiAnalysisResult ? aiAnalysisResult.tags : undefined
+                };
+
+                try {
+                    const res = await fetch(`${API_BASE_URL}/api/stories`, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const data = await res.json();
+
+                    if (!res.ok) {
+                        showToast(data.error || "Failed to submit story.", "error");
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = `<i class="fas fa-paper-plane"></i> Share Story`;
+                    } else {
+                        showToast("Travel Story uploaded successfully! 🎉 Redirecting to blog...", "success");
+                        form.reset();
+                        previewContainer.style.display = "none";
+                        fileUploadText.textContent = "Click here or drag & drop to choose a picture";
+                        
+                        setTimeout(() => {
+                            window.location.href = "blog.html";
+                        }, 2000);
+                    }
+                } catch (err) {
+                    console.error(err);
+                    showToast("Error connecting to server.", "error");
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = `<i class="fas fa-paper-plane"></i> Share Story`;
+                }
+            };
+
+            reader.readAsDataURL(file);
+        });
+    </script>
+</body>
+</html>

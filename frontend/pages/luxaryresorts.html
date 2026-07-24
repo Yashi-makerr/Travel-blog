@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Resorts - Exclusive Escapes</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playball&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="../css/style3.css">
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color-dark);
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 100px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+        .history-section {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            padding: 35px;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+        .history-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        .history-section p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-medium);
+            margin-bottom: 15px;
+        }
+        .history-section p:last-child {
+            margin-bottom: 0;
+        }
+        .location-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary-color-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(102, 156, 203, 0.15);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .location-link:hover {
+            color: var(--primary-color);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Blobs -->
+    <div class="bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav>
+      <div class="nav__logo"><a href="index.html">OceanBound Travels</a></div>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#journey_container" class="active">Destinations</a></li>
+        <li><a href="index.html#blog-section">Blog</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="section__container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Destinations</a>
+        
+        <h1 class="section__title">Luxury Resorts</h1>
+        <p class="section__subtitle">Indulge in the world's most exclusive and scenic escapes</p>
+
+        <!-- History Section -->
+        <section class="history-section">
+            <h3>The History of Luxury Hospitality</h3>
+            <p>
+                The concept of resorts dates back to the Roman Empire, where thermal baths and mineral springs in towns like Baiae functioned as the first health and relaxation retreats for elite citizens. During the 18th and 19th centuries in Europe, luxury spa towns like Bath, UK and Baden-Baden, Germany became major hubs of high society, drawing royalty and nobles who traveled for therapeutic waters and social gatherings.
+            </p>
+            <p>
+                In the late 19th century, the industrial revolution and expanding railroads paved the way for "Grand Hotels" along scenic coastlines and mountain ranges. Innovators like César Ritz redefined guest service, establishing new standards for private bathrooms, fine dining, and personalized hospitality. Today, luxury resorts have evolved to emphasize deep connection with nature and cultural immersion, offering private villas, infinity pools, and eco-luxury wilderness lodges designed to combine five-star service with local sustainability.
+            </p>
+        </section>
+
+        <!-- Resorts Grid -->
+        <h2 class="section__title" style="font-size: 2.5rem; margin-bottom: 2rem;">The 10 Most Exquisite Resorts on Earth</h2>
+        <div class="category-content">
+            <!-- 1. Sasaab -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Sasaab%20Lodge%2C%20Kenya" target="_blank"><img src="../images/travel resort 1.webp" alt="Sasaab Safari Lodge" class="no-modal"></a>
+                <h3>1. Sasaab Lodge, Kenya</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Samburu National Reserve, Kenya</p>
+                <p>Sasaab is a stunning luxury lodge situated in the wild savannah of northern Kenya. The design combines Moroccan and Swahili architectures, featuring expansive open-air thatched villas with private plunge pools overlooking the Ewaso Nyiro River, where elephants gather daily to bathe. Guests can experience game drives, camel treks, and fly camping under the stars.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sasaab%20Lodge%2C%20Kenya" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 2. Omni Amelia Island Resort -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Omni%20Amelia%20Island%20Resort%2C%20Florida" target="_blank"><img src="../images/Omni Amelia Island Resort — Florida.webp" alt="Omni Amelia Island" class="no-modal"></a>
+                <h3>2. Omni Amelia Island Resort, Florida</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Amelia Island, Florida, USA</p>
+                <p>This premium oceanfront resort is nestled on 1,350 acres of live oak forests and pristine sand dunes. Offering luxury rooms, all with direct Atlantic Ocean views, the property features a massive pool deck, championship golf courses, tennis courts, and a full-service spa. It provides the perfect blend of coastal relaxation and family activities.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Omni%20Amelia%20Island%20Resort%2C%20Florida" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 3. Playa Largo Resort & Spa -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Playa%20Largo%20Resort%20%26%20Spa%2C%20Florida" target="_blank"><img src="../images/Playa Largo Resort & Spa, Autograph Collection — Florida.webp" alt="Playa Largo Resort" class="no-modal"></a>
+                <h3>3. Playa Largo Resort & Spa, Florida</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Key Largo, Florida, USA</p>
+                <p>Set along the tranquil Florida Bay, Playa Largo offers a private beach, dock, water sports, and beachside hammocks. Rooms are split across towers, private bungalows, and a beach house with its own pool. Sol by the Sea restaurant serves fresh, local seafood right on the shoreline, capturing the laidback spirit of the Florida Keys.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Playa%20Largo%20Resort%20%26%20Spa%2C%20Florida" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 4. Silverado Resort and Spa -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Silverado%20Resort%20and%20Spa%2C%20Napa%20Valley" target="_blank"><img src="../images/Silverado Resort and Spa — Napa, California.webp" alt="Silverado Resort Napa" class="no-modal"></a>
+                <h3>4. Silverado Resort and Spa, Napa Valley</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Napa, California, USA</p>
+                <p>Silverado is a historic Napa Valley estate surrounded by vineyards, featuring two PGA championship golf courses, tennis courts, and a grand spa. Guests can stay in private condo-style suites and enjoy farm-to-table dining, local wine tastings, and cycling routes winding through Northern California's famous wine region.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Silverado%20Resort%20and%20Spa%2C%20Napa%20Valley" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 5. Sirikoi Lodge -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Sirikoi%20Lodge%2C%20Kenya" target="_blank"><img src="../images/Sirikoi Lodge — Lewa Wildlife Conservancy, Kenya.webp" alt="Sirikoi Lodge Lewa" class="no-modal"></a>
+                <h3>5. Sirikoi Lodge, Kenya</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Lewa Wildlife Conservancy, Kenya</p>
+                <p>Sirikoi is an eco-luxury safari lodge offering high-end comfort in a wild environment. Located in the Lewa Wildlife Conservancy, a UNESCO World Heritage site home to endangered rhinos, the lodge features hand-crafted tents and private cottages surrounded by lush gardens, offering close encounters with grazing giraffes and zebras.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sirikoi%20Lodge%2C%20Kenya" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 6. The Romanos -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=The%20Romanos%2C%20Costa%20Navarino" target="_blank"><img src="../images/The Romanos, a Luxury Collection Resort, Costa Navarino — Greece.webp" alt="The Romanos Costa Navarino" class="no-modal"></a>
+                <h3>6. The Romanos, Costa Navarino</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Costa Navarino, Greece</p>
+                <p>Located in the historic Messinia region of Greece, The Romanos is a luxury beachfront resort overlooking the sapphire Ionian Sea. Featuring elegant marble suites, private plunge pools, and low-slung villas wrapped around infinity lagoons, the property offers philosophy walks in ancient olive groves and organic wine harvesting.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=The%20Romanos%2C%20Costa%20Navarino" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 7. Zemi Beach House -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Zemi%20Beach%20House%2C%20Anguilla" target="_blank"><img src="../images/Zemi Beach House, LXR Hotels & Resorts — Anguilla.webp" alt="Zemi Beach House Anguilla" class="no-modal"></a>
+                <h3>7. Zemi Beach House, Anguilla</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Shoal Bay East, Anguilla</p>
+                <p>Zemi Beach House is a boutique resort situated on six acres along the white sands of Shoal Bay East. It features a unique spa set inside a 300-year-old Thai rice barn imported to the island, offering a volcanic mud bath and hammam treatments. The contemporary rooms are complete with personalized Caribbean minibars.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Zemi%20Beach%20House%2C%20Anguilla" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 8. Le Barthélemy Hotel & Spa -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Le%20Barth%C3%A9lemy%20Hotel%20%26%20Spa%2C%20St.%20Barts" target="_blank"><img src="../images/Le Barthélemy Hotel & Spa — St. Barts.webp" alt="Le Barthélemy St Barts" class="no-modal"></a>
+                <h3>8. Le Barthélemy Hotel & Spa, St. Barts</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Grand Cul-de-Sac, St. Barts</p>
+                <p>Perfectly situated on a crescent bay along the island's northeastern shore, Le Barthélemy is an understated, elegant resort. Offering enormous rooms with wood details and private plunge pools, it faces a shallow, turtle-filled lagoon. The gourmet dining at Amis St. Barth serves modern French-Caribbean fusion cuisine.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Le%20Barth%C3%A9lemy%20Hotel%20%26%20Spa%2C%20St.%20Barts" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 9. Hôtel Barrière Le Carl Gustaf -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=H%C3%B4tel%20Barri%C3%A8re%20Le%20Carl%20Gustaf%2C%20St.%20Barts" target="_blank"><img src="../images/Hôtel Barrière Le Carl Gustaf — St. Barts.webp" alt="Le Carl Gustaf" class="no-modal"></a>
+                <h3>9. Hôtel Barrière Le Carl Gustaf, St. Barts</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Gustavia, St. Barts</p>
+                <p>Perched high on a hill overlooking the harbor of Gustavia, this iconic hotel has been reimagined by designers Gilles & Boissier. It features cream stone, linens, and private bungalows wrapped in tropical greenery. Guests have direct access to Shell Beach and can dine on French-Mediterranean fare by Michelin-starred chef Pierre Gagnaire.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=H%C3%B4tel%20Barri%C3%A8re%20Le%20Carl%20Gustaf%2C%20St.%20Barts" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 10. Laucala Island Resort -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Laucala%20Island%20Resort%2C%20Fiji" target="_blank"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Laucala Island Fiji" class="no-modal"></a>
+                <h3>10. Laucala Island Resort, Fiji</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Laucala Island, Fiji</p>
+                <p>Laucala Island is a private island resort located in the northern archipelago of Fiji. Spanning 3,500 acres of coconut groves, sandy beaches, and rainforest-covered volcanic peaks, the resort features 25 private villas designed after traditional Fijian bures, complete with private pools, and access to a submarine.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Laucala%20Island%20Resort%2C%20Fiji" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Compact Footer -->
+    <footer>
+      <div class="footer__container">
+        <h4>OceanBound Travels</h4>
+        <div class="social__icons">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-linkedin-fill"></i></span>
+        </div>
+        <p class="footer-tagline">
+          Travel makes one modest. You see what a tiny place you occupy in the world.
+        </p>
+        <p class="copyright">&copy; 2026 OceanBound Travels. All rights reserved.</p>
+      </div>
+    </footer>
+</body>
+</html>

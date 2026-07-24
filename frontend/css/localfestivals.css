@@ -20,6 +20,14 @@
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
+.no-modal {
+    width: 90%;     
+    max-width: 520px; /* optional size limit */
+    display: block;
+    margin: 20px auto; /* center align */
+    border-radius: 10px; /* optional: thoda smooth look */
+}
+
 /* Heading 1 Styling */
 .h1 {
     text-align: center;

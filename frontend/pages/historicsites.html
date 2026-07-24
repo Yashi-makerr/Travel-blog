@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historic Sites - Ancient Wonders</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playball&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="../css/style3.css">
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color-dark);
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 100px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+        .history-section {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            padding: 35px;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+        .history-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        .history-section p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-medium);
+            margin-bottom: 15px;
+        }
+        .history-section p:last-child {
+            margin-bottom: 0;
+        }
+        .location-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary-color-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(102, 156, 203, 0.15);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .location-link:hover {
+            color: var(--primary-color);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Blobs -->
+    <div class="bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav>
+      <div class="nav__logo"><a href="index.html">OceanBound Travels</a></div>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#journey_container" class="active">Destinations</a></li>
+        <li><a href="index.html#blog-section">Blog</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="section__container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Destinations</a>
+        
+        <h1 class="section__title">Historic Sites</h1>
+        <p class="section__subtitle">Journey through time and uncover the legacy of human civilization</p>
+
+        <!-- History Section -->
+        <section class="history-section">
+            <h3>The History of Historic Sites Conservation</h3>
+            <p>
+                Historic sites conservation is the practice of protecting and preserving buildings, monuments, and landscapes of historical significance. Culturally, humans have long preserved sacred and imperial structures, but the modern conservation movement emerged during the late 18th and early 19th centuries in Europe. Prompted by the rapid changes of the Industrial Revolution, intellectuals like John Ruskin and William Morris advocated for preserving the integrity of historical craftsmanship, arguing that historic structures belong as much to the past as they do to the future.
+            </p>
+            <p>
+                In the 20th century, international guidelines like the Athens Charter (1931) and the Venice Charter (1964) established professional standards for restoration and preservation. This culminated in the establishment of the UNESCO World Heritage Convention in 1972, which identifies and protects sites of outstanding universal value across the globe. Today, historic site conservation bridges the gap between generations, providing physical links to our collective history and celebrating the diverse architectural and cultural triumphs of human civilization.
+            </p>
+        </section>
+
+        <!-- Historic Sites Grid -->
+        <h2 class="section__title" style="font-size: 2.5rem; margin-bottom: 2rem;">10 Legendary Historic Sites</h2>
+        <div class="category-content">
+            <!-- 1. Gateway of India -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Gateway%20of%20India" target="_blank"><img src="../images/gatewayofindia1.jpeg" alt="Gateway of India, Mumbai" class="no-modal"></a>
+                <h3>1. Gateway of India</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Mumbai, India | Built: 1924</p>
+                <p>The Gateway of India is an iconic Indo-Saracenic arch-monument overlooking the Arabian Sea. Constructed to commemorate the visit of King George V and Queen Mary to India in 1911, it stands as a basalt monument of great architectural significance and a cultural symbol of Mumbai.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Gateway%20of%20India" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 2. Eiffel Tower -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Eiffel%20Tower" target="_blank"><img src="../images/eiffeltower1.jpeg" alt="Eiffel Tower, Paris" class="no-modal"></a>
+                <h3>2. Eiffel Tower</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Paris, France | Built: 1889</p>
+                <p>Built for the 1889 World's Fair by engineer Gustave Eiffel, this 330-meter-tall wrought iron lattice tower has become a global cultural icon. Initially controversial, it represents a remarkable structural triumph of the industrial age and commands panoramic city views.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Eiffel%20Tower" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 3. Leaning Tower of Pisa -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Leaning%20Tower%20of%20Pisa" target="_blank"><img src="../images/towerofpisa.jpeg" alt="Leaning Tower of Pisa" class="no-modal"></a>
+                <h3>3. Leaning Tower of Pisa</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Pisa, Italy | Built: 1173 - 1372</p>
+                <p>This freestanding bell tower of Pisa Cathedral is famous worldwide for its unintended four-degree tilt. The tilt, caused by an unstable foundation of sand and clay, has survived centuries and has been stabilized through modern engineering projects.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Leaning%20Tower%20of%20Pisa" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 4. Hawa Mahal -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Hawa%20Mahal" target="_blank"><img src="../images/hawamahal.jpeg" alt="Hawa Mahal" class="no-modal"></a>
+                <h3>4. Hawa Mahal</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Jaipur, India | Built: 1799</p>
+                <p>Known as the "Palace of Winds," this pink and red sandstone structure is built in the shape of Lord Krishna's crown. Its 953 small windows (jharokhas) allowed royal women to observe street festivals while remaining hidden from public view.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Hawa%20Mahal" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 5. Great Wall of China -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Great%20Wall%20of%20China" target="_blank"><img src="../images/greatwallofchina.jpeg" alt="Great Wall of China" class="no-modal"></a>
+                <h3>5. Great Wall of China</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: China | Built: 7th Century BCE onwards</p>
+                <p>The Great Wall is a series of fortifications built across the historical northern borders of ancient China to protect against nomadic invasions. Stretching over 21,000 kilometers, it stands as an epic marvel of stone, brick, and military defensive engineering.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Great%20Wall%20of%20China" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 6. Ajanta Caves -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Ajanta%20Caves" target="_blank"><img src="../images/ajantacaves.jpeg" alt="Ajanta Caves" class="no-modal"></a>
+                <h3>6. Ajanta Caves</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Maharashtra, India | Built: 2nd Century BCE</p>
+                <p>The Ajanta Caves are about 30 rock-cut Buddhist cave monuments. The caves include paintings and rock-cut sculptures described as among the finest surviving examples of ancient Indian art, depicting Jataka tales and Buddhist cosmology.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Ajanta%20Caves" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 7. Jal Mahal -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Jal%20Mahal" target="_blank"><img src="../images/jalmahal1.jpeg" alt="Jal Mahal" class="no-modal"></a>
+                <h3>7. Jal Mahal</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Jaipur, India | Built: 1750</p>
+                <p>Jal Mahal (meaning "Water Palace") is a palace in the middle of the Man Sagar Lake in Jaipur. The palace, built in red sandstone, exhibits a beautiful symmetrical design of Rajput and Mughal styles, with four stories submerged underwater when full.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Jal%20Mahal" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 8. Sanchi Stupa -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Sanchi%20Stupa" target="_blank"><img src="../images/sanchistupa.jpeg" alt="Sanchi Stupa" class="no-modal"></a>
+                <h3>8. Sanchi Stupa</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Sanchi, India | Built: 3rd Century BCE</p>
+                <p>The Great Stupa at Sanchi is one of the oldest stone structures in India. Commissioned by Emperor Ashoka, it features a hemispherical dome built over the relics of Buddha, surrounded by highly detailed carved gateways (toranas).</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sanchi%20Stupa" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 9. Palace of Versailles -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Palace%20of%20Versailles" target="_blank"><img src="../images/palace.jpeg" alt="Palace of Versailles" class="no-modal"></a>
+                <h3>9. Palace of Versailles</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Versailles, France | Built: 1661 - 1710</p>
+                <p>Originally a royal hunting lodge, the Palace of Versailles was expanded by King Louis XIV into an opulent, gilded court. It represents the height of French Baroque architecture, incorporating the Hall of Mirrors and magnificent gardens.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Palace%20of%20Versailles" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 10. Golden Temple -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Golden%20Temple" target="_blank"><img src="../images/goldentemple.jpeg" alt="Golden Temple" class="no-modal"></a>
+                <h3>10. Golden Temple</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Location: Amritsar, India | Built: 1577</p>
+                <p>Also known as Sri Harmandir Sahib, the Golden Temple is the holiest shrine in Sikhism. Renowned for its stunning marble architecture and upper gold-leaf layers, the temple is surrounded by a sacred pool and stands as a symbol of peace and equality.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Golden%20Temple" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Compact Footer -->
+    <footer>
+      <div class="footer__container">
+        <h4>OceanBound Travels</h4>
+        <div class="social__icons">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-linkedin-fill"></i></span>
+        </div>
+        <p class="footer-tagline">
+          Travel makes one modest. You see what a tiny place you occupy in the world.
+        </p>
+        <p class="copyright">&copy; 2026 OceanBound Travels. All rights reserved.</p>
+      </div>
+    </footer>
+</body>
+</html>

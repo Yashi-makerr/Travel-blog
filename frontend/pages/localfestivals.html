@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Festivals - Cultural Celebrations</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playball&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="../css/style3.css">
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color-dark);
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 100px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+        .history-section {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            padding: 35px;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+        .history-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        .history-section p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-medium);
+            margin-bottom: 15px;
+        }
+        .history-section p:last-child {
+            margin-bottom: 0;
+        }
+        .location-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary-color-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(102, 156, 203, 0.15);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .location-link:hover {
+            color: var(--primary-color);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Blobs -->
+    <div class="bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav>
+      <div class="nav__logo"><a href="index.html">OceanBound Travels</a></div>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#journey_container" class="active">Destinations</a></li>
+        <li><a href="index.html#blog-section">Blog</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="section__container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Destinations</a>
+        
+        <h1 class="section__title">Local Festivals</h1>
+        <p class="section__subtitle">Immerse yourself in the world's most vibrant cultural celebrations</p>
+
+        <!-- History Section -->
+        <section class="history-section">
+            <h3>The History of Cultural Festivals</h3>
+            <p>
+                Cultural festivals have been a cornerstone of human socialization since antiquity. Originating as religious rites, agricultural markers, or communal feasts, they served to unite societies and provide shared meaning. In ancient Greece, the Pythian and Olympic Games merged competition with religious festivity, while Roman Saturnalia and seasonal harvest celebrations marked the agricultural calendar. These gatherings allowed communities to express collective identity, share resources, and preserve folklore through oral storytelling, music, and dance.
+            </p>
+            <p>
+                In the modern era, festivals have evolved into global celebrations that promote cultural exchange, artistic expression, and international tourism. From ancient religious holidays like Diwali and Holi to massive performance arts gatherings like the Edinburgh Fringe, festivals remain a vital space for creative expression and community bonding. They offer travelers an unparalleled window into local traditions, showcasing the music, clothing, culinary arts, and values that define diverse cultures around the globe.
+            </p>
+        </section>
+
+        <!-- Festivals Grid -->
+        <h2 class="section__title" style="font-size: 2.5rem; margin-bottom: 2rem;">10 Spectacular Global Festivals</h2>
+        <div class="category-content">
+            <!-- 1. Diwali -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Diwali%20%20India" target="_blank"><img src="../images/diwali1.jpeg" alt="Diwali Lights" class="no-modal"></a>
+                <h3>1. Diwali (India)</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Season: Autumn (Oct - Nov) | Location: India</p>
+                <p>Diwali, the Festival of Lights, celebrates the victory of light over darkness and good over evil. Homes are decorated with clay lamps (diyas), floors are adorned with colorful patterns (rangoli), and families gather to share sweets, offer prayers, and set off vibrant fireworks.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Diwali%20%20India" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location (Jaipur, India)</a>
+            </div>
+
+            <!-- 2. Carnival -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Carnival%20%20Rio%20de%20Janeiro%2C%20Brazil" target="_blank"><img src="../images/carnival1.jpeg" alt="Rio Carnival" class="no-modal"></a>
+                <h3>2. Carnival (Rio de Janeiro, Brazil)</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Season: Before Lent (Feb - Mar) | Location: Rio de Janeiro, Brazil</p>
+                <p>Rio's Carnival is the biggest and most famous festival in the world. Known for its explosive energy, elaborate float parades, synchronized samba dancers, and dazzling sequin-clad costumes, the city becomes a massive, nonstop street party celebrating Brazilian culture.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Carnival%20%20Rio%20de%20Janeiro%2C%20Brazil" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location (Sambadrome, Rio)</a>
+            </div>
+
+            <!-- 3. Oktoberfest -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Oktoberfest%20%20Munich%2C%20Germany" target="_blank"><img src="../images/octoberfest1.jpeg" alt="Oktoberfest Munich" class="no-modal"></a>
+                <h3>3. Oktoberfest (Munich, Germany)</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Season: Autumn (Sep - Oct) | Location: Munich, Germany</p>
+                <p>Oktoberfest is the world's largest Volksfest (beer festival and traveling funfair). Celebrating Bavarian heritage, millions of visitors gather in massive tents to enjoy traditional folk music, wear Dirndl and Lederhosen, and feast on pretzels, sausages, and local beer.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Oktoberfest%20%20Munich%2C%20Germany" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location (Theresienwiese, Munich)</a>
+            </div>
+
+            <!-- 4. Chinese New Year -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Chinese%20New%20Year%20%20China" target="_blank"><img src="../images/chinesenewyear2.jpeg" alt="Chinese New Year" class="no-modal"></a>
+                <h3>4. Chinese New Year (China)</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Season: Winter/Spring (Jan - Feb) | Location: China</p>
+                <p>Also known as the Spring Festival, Chinese New Year marks the turn of the traditional lunisolar calendar. Celebrations include family reunion dinners, giving red envelopes filled with money, lighting firecrackers, and watching spectacular lion and dragon dances.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Chinese%20New%20Year%20%20China" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location (Beijing, China)</a>
+            </div>
+
+            <!-- 5. La Tomatina -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=La%20Tomatina%20%20Bu%C3%B1ol%2C%20Spain" target="_blank"><img src="../images/latomatina1.jpeg" alt="La Tomatina" class="no-modal"></a>
+                <h3>5. La Tomatina (Buñol, Spain)</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Season: Late August | Location: Buñol, Spain</p>
+                <p>La Tomatina is a food fight festival held in the Valencian town of Buñol. Thousands of participants from all over the globe gather to throw overripe tomatoes at each other in the streets, turning the entire town red in an hour of pure, chaotic fun.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=La%20Tomatina%20%20Bu%C3%B1ol%2C%20Spain" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location (Buñol, Spain)</a>
+            </div>
+
+            <!-- 6. Mardi Gras -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Mardi%20Gras%20%20New%20Orleans%2C%20USA" target="_blank"><img src="../images/mardigras1.jpeg" alt="Mardi Gras New Orleans" class="no-modal"></a>
+                <h3>6. Mardi Gras (New Orleans, USA)</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Season: Before Lent (Feb - Mar) | Location: New Orleans, Louisiana</p>
+                <p>Mardi Gras in New Orleans is an iconic carnival celebration characterized by spectacular parades organized by social clubs (krewes). Spectators line the streets to catch thrown plastic beads, doubloons, and toys amidst music, costumes, and dancing.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mardi%20Gras%20%20New%20Orleans%2C%20USA" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location (French Quarter, NOLA)</a>
+            </div>
+
+            <!-- 7. Holi -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Holi%20%20India" target="_blank"><img src="../images/holi.jpeg" alt="Holi festival" class="no-modal"></a>
+                <h3>7. Holi (India)</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Season: Spring (March) | Location: India</p>
+                <p>Holi, the Festival of Colors, celebrates the end of winter, the arrival of spring, and the triumph of good over evil. Revelers smear colorful powders (gulal) and splash colored water on friends and strangers alike, dancing together in open streets.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Holi%20%20India" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location (Mathura, India)</a>
+            </div>
+
+            <!-- 8. Sapporo Snow Festival -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Sapporo%20Snow%20Festival%20%20Sapporo%2C%20Japan" target="_blank"><img src="../images/sapporosnowfestival.jpeg" alt="Sapporo Snow Festival" class="no-modal"></a>
+                <h3>8. Sapporo Snow Festival (Sapporo, Japan)</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Season: Winter (February) | Location: Sapporo, Japan</p>
+                <p>The Sapporo Snow Festival is a magical winter event featuring hundreds of stunning, giant snow and ice sculptures. Illuminated beautifully at night, the event attracts millions of visitors to see historic buildings and pop-culture icons rendered in ice.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sapporo%20Snow%20Festival%20%20Sapporo%2C%20Japan" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location (Odori Park, Sapporo)</a>
+            </div>
+
+            <!-- 9. Running of the Bulls -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=The%20Running%20of%20the%20Bulls%20%20Pamplona%2C%20Spain" target="_blank"><img src="../images/bullrunning.jpeg" alt="Running of the Bulls" class="no-modal"></a>
+                <h3>9. The Running of the Bulls (Pamplona, Spain)</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Season: Mid-July | Location: Pamplona, Spain</p>
+                <p>A key event of the San Fermín festival, the Running of the Bulls involves hundreds of people running in front of six loose bulls through the narrow, cobbled streets of Pamplona, ending at the historic city bullring amid massive street parties.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=The%20Running%20of%20the%20Bulls%20%20Pamplona%2C%20Spain" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location (Pamplona, Spain)</a>
+            </div>
+
+            <!-- 10. Edinburgh Festival Fringe -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Edinburgh%20Festival%20Fringe%20%20Edinburgh%2C%20Scotland" target="_blank"><img src="../images/edinburgh.jpeg" alt="Edinburgh Fringe" class="no-modal"></a>
+                <h3>10. Edinburgh Festival Fringe (Edinburgh, Scotland)</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Season: Late August | Location: Edinburgh, Scotland</p>
+                <p>The Fringe is the world's largest arts and media festival. For three weeks, Scotland's capital is taken over by thousands of performers showcasing theater, stand-up comedy, street performances, opera, and dance in hundreds of venues across the city.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Edinburgh%20Festival%20Fringe%20%20Edinburgh%2C%20Scotland" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location (Royal Mile, Edinburgh)</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Compact Footer -->
+    <footer>
+      <div class="footer__container">
+        <h4>OceanBound Travels</h4>
+        <div class="social__icons">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-linkedin-fill"></i></span>
+        </div>
+        <p class="footer-tagline">
+          Travel makes one modest. You see what a tiny place you occupy in the world.
+        </p>
+        <p class="copyright">&copy; 2026 OceanBound Travels. All rights reserved.</p>
+      </div>
+    </footer>
+</body>
+</html>

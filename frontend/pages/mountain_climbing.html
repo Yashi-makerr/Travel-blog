@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mountain Climbing - Tallest Peaks</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playball&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="../css/style3.css">
+    <style>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color-dark);
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 100px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .back-link:hover {
+            color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+        .history-section {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-glass);
+            padding: 35px;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+        .history-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+        .history-section p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-medium);
+            margin-bottom: 15px;
+        }
+        .history-section p:last-child {
+            margin-bottom: 0;
+        }
+        .location-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary-color-dark);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-top: auto;
+            padding-top: 15px;
+            border-top: 1px solid rgba(102, 156, 203, 0.15);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .location-link:hover {
+            color: var(--primary-color);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Blobs -->
+    <div class="bg-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav>
+      <div class="nav__logo"><a href="index.html">OceanBound Travels</a></div>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#journey_container" class="active">Destinations</a></li>
+        <li><a href="index.html#blog-section">Blog</a></li>
+        <li><a href="index.html#offers">Offers</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="section__container">
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Destinations</a>
+        
+        <h1 class="section__title">Mountain Climbing</h1>
+        <p class="section__subtitle">Conquering the highest points on Earth</p>
+
+        <!-- History Section -->
+        <section class="history-section">
+            <h3>The History of Mountaineering</h3>
+            <p>
+                Mountaineering, or mountain climbing, has fascinated humanity for centuries. Originating as a necessity for crossings and mountain warfare, it transformed into a sport during the 18th century. The ascent of Mont Blanc in 1786 by Jacques Balmat and Michel-Gabriel Paccard marked the birth of modern Alpinism. This sparked the "Golden Age of Alpinism" in the mid-19th century, where climbers from Europe systematically conquered the peaks of the Alps.
+            </p>
+            <p>
+                In the 20th century, the focus shifted to the highest peaks of the Himalayas and Karakoram. The ultimate pursuit became the 14 "Eight-Thousanders"—peaks rising above 8,000 meters sea level. In 1950, Maurice Herzog and Louis Lachenal climbed Annapurna I, the first 8,000er conquered. Three years later, in 1953, Sir Edmund Hillary and Tenzing Norgay made the legendary first successful ascent of Mount Everest. Today, mountain climbing tests human endurance, requiring intense physical strength, mental resilience, and technical expertise under hazardous conditions.
+            </p>
+        </section>
+
+        <!-- Tallest Peaks Grid -->
+        <h2 class="section__title" style="font-size: 2.5rem; margin-bottom: 2rem;">The 10 Tallest Mountains in the World</h2>
+        <div class="category-content">
+            <!-- 1. Mount Everest -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Mount%20Everest" target="_blank"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80" alt="Mount Everest" class="no-modal"></a>
+                <h3>1. Mount Everest</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Height: 8,848.86 m | Location: Nepal / China</p>
+                <p>Mount Everest is Earth's highest mountain above sea level, located in the Mahalangur Himal sub-range of the Himalayas. The international border between Nepal and China runs across its summit point. First climbed by Sir Edmund Hillary and Tenzing Norgay in 1953, it remains the ultimate prize for mountaineers worldwide, presenting extreme challenges including thin air in the 'Death Zone' and volatile weather conditions.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mount%20Everest" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 2. K2 -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=K2" target="_blank"><img src="https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?auto=format&fit=crop&w=800&q=80" alt="K2 Peak" class="no-modal"></a>
+                <h3>2. K2</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Height: 8,611 m | Location: Pakistan / China</p>
+                <p>K2, also known as Mount Godwin-Austen or Chogori, is the second-highest mountain on Earth, located in the Karakoram range. It is widely considered the most dangerous climb in the world, earning the nickname the "Savage Mountain." K2 has a notoriously high fatality rate, and it was only recently successfully summited during winter for the first time in 2021 by a Nepalese team.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=K2" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 3. Kangchenjunga -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Kangchenjunga" target="_blank"><img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80" alt="Kangchenjunga" class="no-modal"></a>
+                <h3>3. Kangchenjunga</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Height: 8,586 m | Location: Nepal / India</p>
+                <p>Kangchenjunga is the third-highest mountain in the world, rising in a section of the Himalayas called the Kangchenjunga Himal. It is the easternmost of the 8,000-meter peaks. Meaning "The Five Treasures of Snows" in Tibetan, the mountain is sacred to the local people, and early expeditions traditionally stopped a few feet short of the actual summit to respect this belief.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Kangchenjunga" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 4. Lhotse -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Lhotse" target="_blank"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Lhotse" class="no-modal"></a>
+                <h3>4. Lhotse</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Height: 8,516 m | Location: Nepal / China</p>
+                <p>Lhotse is the fourth-highest mountain in the world and is connected directly to Mount Everest via the South Col. The main summit sits on the border between Tibet (China) and Nepal. Its steep, dramatic South Face is one of the largest and most dangerous rock walls in the world, historically challenging the world's most elite mountaineers.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Lhotse" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 5. Makalu -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Makalu" target="_blank"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Makalu" class="no-modal"></a>
+                <h3>5. Makalu</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Height: 8,485 m | Location: Nepal / China</p>
+                <p>Makalu is the fifth-highest mountain in the world, situated in the Hindu Kush sub-range. It is an isolated peak shaped like a four-sided pyramid, known for its steep slopes and sharp ridges. The final ascent to the summit involves highly technical rock and ice climbing, making it one of the more difficult 8,000-meter climbs.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Makalu" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 6. Cho Oyu -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Cho%20Oyu" target="_blank"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Cho Oyu" class="no-modal"></a>
+                <h3>6. Cho Oyu</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Height: 8,188 m | Location: Nepal / China</p>
+                <p>Cho Oyu is the sixth-highest mountain in the world. Located on the border between Nepal and China, its name translates to "Turquoise Goddess" in Tibetan. Cho Oyu is generally considered the easiest of the 14 eight-thousand-meter peaks to climb due to its moderate slopes and direct access routes, making it a popular target for commercial expeditions.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Cho%20Oyu" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 7. Dhaulagiri I -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Dhaulagiri%20I" target="_blank"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Dhaulagiri" class="no-modal"></a>
+                <h3>7. Dhaulagiri I</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Height: 8,167 m | Location: Nepal</p>
+                <p>Dhaulagiri I is the seventh-highest mountain in the world, located entirely within Nepal. When first discovered by Western surveyors in 1808, it was mapped as the highest mountain in the world, a title it held for 30 years. It features massive ridges and is bordered by the deep Kali Gandaki Gorge, the deepest canyon on Earth.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Dhaulagiri%20I" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 8. Manaslu -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Manaslu" target="_blank"><img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Manaslu Mountain" class="no-modal"></a>
+                <h3>8. Manaslu</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Height: 8,163 m | Location: Nepal</p>
+                <p>Manaslu is the eighth-highest mountain in the world, situated in the Gorkha District. Its name comes from the Sanskrit word Manasa, meaning "mountain of the spirit." Manaslu was first climbed in 1956 by a Japanese expedition, and it has since held a special cultural connection with Japan, similar to British ties with Everest.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Manaslu" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 9. Nanga Parbat -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Nanga%20Parbat" target="_blank"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Nanga Parbat" class="no-modal"></a>
+                <h3>9. Nanga Parbat</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Height: 8,126 m | Location: Pakistan</p>
+                <p>Nanga Parbat is the ninth-highest mountain in the world and sits at the western anchor of the Himalayas. Rising directly above the Indus River, it has one of the highest vertical reliefs on Earth. Famously known as the "Killer Mountain" due to the extreme difficulty of the climb, its Rupal Face stands as a colossal 4,600m wall.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Nanga%20Parbat" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+
+            <!-- 10. Annapurna I -->
+            <div class="category-item">
+                <a href="https://www.google.com/maps/search/?api=1&query=Annapurna%20I" target="_blank"><img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80" alt="Annapurna" class="no-modal"></a>
+                <h3>10. Annapurna I</h3>
+                <p style="font-weight: 600; color: var(--primary-color-dark); margin-bottom: 10px;">Height: 8,091 m | Location: Nepal</p>
+                <p>Annapurna I is the tenth-highest mountain in the world. Historically, it was the first peak above 8,000 meters to be scaled, summited by French climbers Maurice Herzog and Louis Lachenal in 1950. Annapurna is statistically one of the most dangerous peaks, with a high ratio of fatalities to successful summits.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Annapurna%20I" target="_blank" class="location-link"><i class="fas fa-map-marked-alt"></i> Tap for Location</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Compact Footer -->
+    <footer>
+      <div class="footer__container">
+        <h4>OceanBound Travels</h4>
+        <div class="social__icons">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-linkedin-fill"></i></span>
+        </div>
+        <p class="footer-tagline">
+          Travel makes one modest. You see what a tiny place you occupy in the world.
+        </p>
+        <p class="copyright">&copy; 2026 OceanBound Travels. All rights reserved.</p>
+      </div>
+    </footer>
+</body>
+</html>

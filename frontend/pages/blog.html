@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - OceanBound Travels</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playball&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Italiana&family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/ai-widget.css">
+</head>
+<body>
+    <!-- Background Blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="index.html" class="logo">OceanBound Travels</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <!-- Auth links injected here dynamically -->
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <h1>Wanderlust Chronicles</h1>
+        <p>Explore stories, adventures, and insights shared by travel enthusiasts around the globe. Get inspired for your next destination.</p>
+    </section>
+
+    <!-- Controls Section -->
+    <section class="blog-controls">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Search stories...">
+        </div>
+        <div class="filter-tabs" id="filterTabs">
+            <div class="tab active" data-category="all">All Stories</div>
+            <div class="tab" data-category="adventure">Adventure</div>
+            <div class="tab" data-category="luxury">Luxury</div>
+            <div class="tab" data-category="culture">Culture</div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <main class="blog-grid" id="blogGrid">
+        <!-- Skeleton Loaders (initial view) -->
+        <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-body">
+                <div class="skeleton-text title"></div>
+                <div class="skeleton-text desc-1"></div>
+                <div class="skeleton-text desc-2"></div>
+                <div class="skeleton-text desc-3"></div>
+            </div>
+        </div>
+        <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-body">
+                <div class="skeleton-text title"></div>
+                <div class="skeleton-text desc-1"></div>
+                <div class="skeleton-text desc-2"></div>
+                <div class="skeleton-text desc-3"></div>
+            </div>
+        </div>
+        <div class="skeleton-card">
+            <div class="skeleton-img"></div>
+            <div class="skeleton-body">
+                <div class="skeleton-text title"></div>
+                <div class="skeleton-text desc-1"></div>
+                <div class="skeleton-text desc-2"></div>
+                <div class="skeleton-text desc-3"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Infinite Scroll Sentinel Trigger -->
+    <div class="scroll-trigger" id="scrollTrigger">
+        <div class="spinner" id="spinner"></div>
+    </div>
+
+    <!-- Detail Story Modal Overlay -->
+    <div class="story-modal" id="storyModal">
+        <div class="modal-container">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-banner">
+                <img id="modalImg" src="" alt="Story Banner">
+            </div>
+            <div class="modal-body">
+                <h2 class="modal-title" id="modalTitle">Story Title</h2>
+                <div class="modal-meta">
+                    <div class="modal-meta-item">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="modalAuthor">Author</span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="modalDate">Date</span>
+                    </div>
+                    <div class="modal-meta-item" id="modalGenderGroup">
+                        <i class="fas fa-venus-mars"></i>
+                        <span id="modalGender">Gender</span>
+                    </div>
+                </div>
+                <p class="modal-story-text" id="modalText">Full story goes here...</p>
+
+                <!-- Comments Mockup Section -->
+                <div class="comment-section">
+                    <h3>Comments (<span id="commentCount">2</span>)</h3>
+                    <div class="comment-input-box">
+                        <input type="text" id="commentInput" placeholder="Write a comment...">
+                        <button id="postCommentBtn">Post</button>
+                    </div>
+                    <div id="commentsList">
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-user">Alex Johnson</span>
+                                <span>1 day ago</span>
+                            </div>
+                            <p class="comment-content">This is absolutely stunning! Added to my travel bucket list immediately.</p>
+                        </div>
+                        <div class="comment-item">
+                            <div class="comment-header">
+                                <span class="comment-user">Sarah Miller</span>
+                                <span>2 days ago</span>
+                            </div>
+                            <p class="comment-content">Incredible story. The way you described the local guide was so touching.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/config.js"></script>
+    <script>
+        // DOM Elements
+        const blogGrid = document.getElementById("blogGrid");
+        const scrollTrigger = document.getElementById("scrollTrigger");
+        const spinner = document.getElementById("spinner");
+        const searchInput = document.getElementById("searchInput");
+        const filterTabs = document.getElementById("filterTabs");
+        const navLinks = document.getElementById("navLinks");
+        
+        // Modal DOM Elements
+        const storyModal = document.getElementById("storyModal");
+        const modalClose = document.getElementById("modalClose");
+        const modalImg = document.getElementById("modalImg");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalAuthor = document.getElementById("modalAuthor");
+        const modalDate = document.getElementById("modalDate");
+        const modalGender = document.getElementById("modalGender");
+        const modalGenderGroup = document.getElementById("modalGenderGroup");
+        const modalText = document.getElementById("modalText");
+        const commentInput = document.getElementById("commentInput");
+        const postCommentBtn = document.getElementById("postCommentBtn");
+        const commentsList = document.getElementById("commentsList");
+        const commentCountEl = document.getElementById("commentCount");
+
+        // Pagination State
+        let currentPage = 1;
+        const limit = 4;
+        let isLoading = false;
+        let hasMore = true;
+        let loadedStories = [];
+        let activeCategory = "all";
+        let searchQuery = "";
+
+        // Interactive modal details state
+        let currentModalStoryId = null;
+
+        // Initialize header auth links
+        function updateHeaderAuth() {
+            const user = JSON.parse(localStorage.getItem("user"));
+            
+            // Clear previous login/signup links if they exist
+            const authItems = navLinks.querySelectorAll(".auth-item");
+            authItems.forEach(item => item.remove());
+
+            if (user) {
+                // User logged in: add Share Story & Logout
+                navLinks.innerHTML += `
+                    <li class="auth-item"><a href="upload.html" class="write-btn">Share Story</a></li>
+                    <li class="auth-item"><a href="#" id="logoutBtn" style="color: #ef4444; font-weight: 600;">Logout</a></li>
+                `;
+                
+                // Add event listener to dynamically created logout
+                document.getElementById("logoutBtn").addEventListener("click", (e) => {
+                    e.preventDefault();
+                    localStorage.removeItem("user");
+                    updateHeaderAuth();
+                    window.location.reload();
+                });
+            } else {
+                // User not logged in: add Login / Signup
+                navLinks.innerHTML += `
+                    <li class="auth-item"><a href="login.html">Login</a></li>
+                    <li class="auth-item"><a href="signup.html" style="background: rgba(0, 136, 255, 0.15); border: 1px solid rgba(0, 136, 255, 0.3); border-radius: 6px;">Sign Up</a></li>
+                `;
+            }
+        }
+
+        // Determine category tag based on story keywords
+        function getCategoryTag(storyText) {
+            const text = storyText.toLowerCase();
+            if (text.includes("climb") || text.includes("dive") || text.includes("adventure") || text.includes("hike") || text.includes("mountain") || text.includes("peak")) {
+                return "adventure";
+            } else if (text.includes("luxury") || text.includes("resort") || text.includes("jet") || text.includes("luxe") || text.includes("villas")) {
+                return "luxury";
+            } else if (text.includes("culture") || text.includes("festival") || text.includes("historic") || text.includes("ancient") || text.includes("tradition")) {
+                return "culture";
+            }
+            return "wanderlust";
+        }
+
+        // Clean & truncate string
+        function extractTitle(storyText) {
+            const sentences = storyText.split(/[.!?]/);
+            let title = sentences[0] || "My Travel Memoir";
+            // limit to 8 words
+            const words = title.split(" ");
+            if (words.length > 8) {
+                return words.slice(0, 8).join(" ") + "...";
+            }
+            return title;
+        }
+
+        // Render card markup
+        function createStoryCard(story) {
+            const category = story.aiCategory || getCategoryTag(story.story);
+            const title = extractTitle(story.story);
+            const formattedDate = new Date(story.createdAt).toLocaleDateString("en-US", {
+                month: "short",
+                day: "numeric",
+                year: "numeric"
+            });
+
+            const card = document.createElement("div");
+            card.className = "blog-card";
+            card.dataset.id = story._id;
+            card.dataset.category = category;
+
+            card.innerHTML = `
+                <div class="card-img-wrapper">
+                    <img src="${story.imageUrl}" alt="${title}">
+                    <span class="card-tag">${category.toUpperCase()}</span>
+                </div>
+                <div class="card-content">
+                    <div>
+                        <div class="card-meta">
+                            <span class="card-author"><i class="fas fa-user-circle"></i> ${story.name}</span>
+                            <span>${formattedDate}</span>
+                        </div>
+                        <h3 class="card-title">${title}</h3>
+                        <p class="card-description">${story.story}</p>
+                    </div>
+                    <div class="card-footer">
+                        Read Story <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            `;
+
+            // Open modal on card click
+            card.addEventListener("click", () => openStoryModal(story, category, title, formattedDate));
+
+            return card;
+        }
+
+        // Fetch pages dynamically from backend API
+        async function fetchStories() {
+            if (isLoading || !hasMore) return;
+            isLoading = true;
+
+            try {
+                const res = await fetch(`${API_BASE_URL}/api/stories?page=${currentPage}&limit=${limit}`);
+                const data = await res.json();
+
+                if (currentPage === 1) {
+                    blogGrid.innerHTML = ""; // Clear initial skeletons
+                }
+
+                if (data.stories && data.stories.length > 0) {
+                    data.stories.forEach(story => {
+                        loadedStories.push(story);
+                        const card = createStoryCard(story);
+                        blogGrid.appendChild(card);
+                    });
+                    
+                    applyFilterAndSearch(); // apply active filters on load
+
+                    hasMore = data.hasMore;
+                    currentPage++;
+                } else {
+                    hasMore = false;
+                }
+
+                // If no more stories, update UI
+                if (!hasMore) {
+                    scrollTrigger.innerHTML = `<div class="no-more-msg">You've explored all the stories! ✨</div>`;
+                    observer.unobserve(scrollTrigger);
+                }
+            } catch (err) {
+                console.error("Error fetching stories from backend:", err);
+                if (currentPage === 1) {
+                    blogGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; color: #ef4444; font-weight: 600; padding: 40px;">Failed to load travel stories from database.</div>`;
+                }
+            } finally {
+                isLoading = false;
+            }
+        }
+
+        // Apply visual category active tab filters & search input matches
+        function applyFilterAndSearch() {
+            const cards = blogGrid.querySelectorAll(".blog-card");
+            let countVisible = 0;
+
+            cards.forEach(card => {
+                const cardCat = card.dataset.category;
+                const cardTitle = card.querySelector(".card-title").textContent.toLowerCase();
+                const cardAuthor = card.querySelector(".card-author").textContent.toLowerCase();
+                const cardDesc = card.querySelector(".card-description").textContent.toLowerCase();
+
+                const matchesCategory = (activeCategory === "all" || cardCat === activeCategory);
+                const matchesSearch = (
+                    cardTitle.includes(searchQuery) ||
+                    cardAuthor.includes(searchQuery) ||
+                    cardDesc.includes(searchQuery)
+                );
+
+                if (matchesCategory && matchesSearch) {
+                    card.style.display = "flex";
+                    countVisible++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            // If no visible stories match search/filters
+            const existingNoStories = document.getElementById("noStoriesMessage");
+            if (countVisible === 0 && loadedStories.length > 0) {
+                if (!existingNoStories) {
+                    const msg = document.createElement("div");
+                    msg.id = "noStoriesMessage";
+                    msg.style.cssText = "grid-column: 1/-1; text-align: center; color: var(--text-gray); padding: 50px 0;";
+                    msg.innerHTML = `<i class="fas fa-compass" style="font-size: 2.5rem; margin-bottom: 15px; color: var(--primary);"></i><p>No stories found matching your filter details.</p>`;
+                    blogGrid.appendChild(msg);
+                }
+            } else if (existingNoStories) {
+                existingNoStories.remove();
+            }
+        }
+
+        // Setup Infinite Scroll Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px 0px 200px 0px", // Trigger slightly before the sentinel hits view
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !isLoading && hasMore) {
+                    fetchStories();
+                }
+            });
+        }, observerOptions);
+
+        // Active tab filters handler
+        filterTabs.addEventListener("click", (e) => {
+            const tab = e.target.closest(".tab");
+            if (!tab) return;
+
+            filterTabs.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+            activeCategory = tab.dataset.category;
+            applyFilterAndSearch();
+        });
+
+        // Search inputs handler
+        searchInput.addEventListener("input", (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            applyFilterAndSearch();
+        });
+
+        // 🖼️ Modal handlers
+        function openStoryModal(story, category, title, formattedDate) {
+            currentModalStoryId = story._id;
+            modalImg.src = story.imageUrl;
+            modalTitle.textContent = title;
+            modalAuthor.textContent = story.name;
+            modalDate.textContent = formattedDate;
+            modalText.textContent = story.story;
+
+            if (story.gender) {
+                modalGender.textContent = story.gender.charAt(0).toUpperCase() + story.gender.slice(1);
+                modalGenderGroup.style.display = "flex";
+            } else {
+                modalGenderGroup.style.display = "none";
+            }
+
+            // Dynamic AI Insights Box
+            let aiBox = document.getElementById("modalAiBox");
+            if (!aiBox) {
+                aiBox = document.createElement("div");
+                aiBox.id = "modalAiBox";
+                modalText.parentNode.insertBefore(aiBox, modalText);
+            }
+            
+            if (story.aiSummary || (story.aiTags && story.aiTags.length > 0)) {
+                aiBox.innerHTML = `
+                    <div style="background: rgba(139, 92, 246, 0.06); border: 1px solid rgba(139, 92, 246, 0.2); border-radius: 10px; padding: 15px; margin-bottom: 20px;">
+                        <h4 style="font-size: 0.95rem; color: #a78bfa; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; font-weight: 600;">
+                            <i class="fas fa-brain"></i> AI Insights
+                        </h4>
+                        ${story.aiSummary ? `<p style="font-size: 0.9rem; color: #cbd5e0; font-style: italic; margin-bottom: 8px; line-height: 1.4;"><strong>AI Summary:</strong> ${story.aiSummary}</p>` : ''}
+                        ${story.aiTags && story.aiTags.length > 0 ? `
+                            <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                                ${story.aiTags.map(tag => `<span style="background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.25); padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; color: #c084fc;">#${tag}</span>`).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+                aiBox.style.display = "block";
+            } else {
+                aiBox.style.display = "none";
+            }
+
+            // Reset comments count and mock entries
+            commentCountEl.textContent = "2";
+            commentsList.innerHTML = `
+                <div class="comment-item">
+                    <div class="comment-header">
+                        <span class="comment-user">Alex Johnson</span>
+                        <span>1 day ago</span>
+                    </div>
+                    <p class="comment-content">This is absolutely stunning! Added to my travel bucket list immediately.</p>
+                </div>
+                <div class="comment-item">
+                    <div class="comment-header">
+                        <span class="comment-user">Sarah Miller</span>
+                        <span>2 days ago</span>
+                    </div>
+                    <p class="comment-content">Incredible story. The way you described the local guide was so touching.</p>
+                </div>
+            `;
+            commentInput.value = "";
+
+            // Dynamic Recommendations Box
+            let recsBox = document.getElementById("modalRecsBox");
+            if (!recsBox) {
+                recsBox = document.createElement("div");
+                recsBox.id = "modalRecsBox";
+                recsBox.style.cssText = "margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-bottom: 25px;";
+                const commentSection = document.querySelector(".comment-section");
+                if (commentSection) {
+                    commentSection.parentNode.insertBefore(recsBox, commentSection);
+                } else {
+                    modalText.parentNode.appendChild(recsBox);
+                }
+            }
+
+            recsBox.innerHTML = `
+                <h4 style="font-size: 1.1rem; color: #669ccb; margin-bottom: 15px; display: flex; align-items: center; gap: 8px; font-weight: 600;">
+                    <i class="fas fa-compass"></i> Similar Adventures
+                </h4>
+                <div id="recsContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 15px;">
+                    <div style="color: #a0aec0; font-size: 0.85rem;">Calculating similar journeys...</div>
+                </div>
+            `;
+
+            fetch(`${API_BASE_URL}/api/stories/${story._id}/recommendations`)
+                .then(res => res.json())
+                .then(recommendations => {
+                    const recsContainer = document.getElementById("recsContainer");
+                    if (!recsContainer) return;
+                    
+                    if (!recommendations || recommendations.length === 0) {
+                        recsContainer.innerHTML = `<div style="color: #a0aec0; font-size: 0.85rem; grid-column: 1/-1;">No similar adventures found.</div>`;
+                        return;
+                    }
+
+                    recsContainer.innerHTML = "";
+                    recommendations.forEach(rec => {
+                        const recCat = rec.aiCategory || getCategoryTag(rec.story);
+                        const recTitle = extractTitle(rec.story);
+                        const recDate = new Date(rec.createdAt).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric"
+                        });
+
+                        const recCard = document.createElement("div");
+                        recCard.style.cssText = "background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; overflow: hidden; cursor: pointer; transition: all 0.3s ease; display: flex; flex-direction: column;";
+                        
+                        recCard.innerHTML = `
+                            <div style="height: 90px; overflow: hidden; position: relative;">
+                                <img src="${rec.imageUrl}" style="width: 100%; height: 100%; object-fit: cover;" class="no-modal">
+                                <span style="position: absolute; top: 6px; left: 6px; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(4px); padding: 2px 6px; border-radius: 4px; font-size: 0.65rem; color: #fff; text-transform: uppercase; font-weight: 700; border: 1px solid rgba(255, 255, 255, 0.1);">${recCat}</span>
+                            </div>
+                            <div style="padding: 10px; display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                                <h5 style="margin: 0 0 6px 0; font-size: 0.85rem; color: #fff; font-weight: 600; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${recTitle}</h5>
+                                <span style="font-size: 0.72rem; color: #a0aec0; display: flex; align-items: center; gap: 4px;"><i class="fas fa-user-circle"></i> ${rec.name}</span>
+                            </div>
+                        `;
+
+                        recCard.addEventListener("mouseenter", () => {
+                            recCard.style.background = "rgba(255, 255, 255, 0.08)";
+                            recCard.style.borderColor = "rgba(102, 156, 203, 0.4)";
+                            recCard.style.transform = "translateY(-2px)";
+                        });
+                        recCard.addEventListener("mouseleave", () => {
+                            recCard.style.background = "rgba(255, 255, 255, 0.04)";
+                            recCard.style.borderColor = "rgba(255, 255, 255, 0.08)";
+                            recCard.style.transform = "none";
+                        });
+
+                        recCard.addEventListener("click", () => {
+                            openStoryModal(rec, recCat, recTitle, recDate);
+                            const container = document.querySelector(".modal-container");
+                            if (container) container.scrollTop = 0;
+                        });
+
+                        recsContainer.appendChild(recCard);
+                    });
+                })
+                .catch(err => {
+                    console.error("Error loading recommendations:", err);
+                    const recsContainer = document.getElementById("recsContainer");
+                    if (recsContainer) {
+                        recsContainer.innerHTML = `<div style="color: #ef4444; font-size: 0.85rem; grid-column: 1/-1;">Failed to load similar adventures.</div>`;
+                    }
+                });
+
+            storyModal.classList.add("show");
+            document.body.style.overflow = "hidden"; // disable body scroll
+        }
+
+        function closeStoryModal() {
+            storyModal.classList.remove("show");
+            document.body.style.overflow = "auto";
+        }
+
+        modalClose.addEventListener("click", closeStoryModal);
+        storyModal.addEventListener("click", (e) => {
+            if (e.target === storyModal) closeStoryModal();
+        });
+
+        // 💬 Comment Submit system
+        postCommentBtn.addEventListener("click", () => {
+            const text = commentInput.value.trim();
+            if (!text) return;
+
+            const user = JSON.parse(localStorage.getItem("user"));
+            const authorName = user ? user.name : "Anonymous Explorer";
+
+            const newComment = document.createElement("div");
+            newComment.className = "comment-item";
+            newComment.innerHTML = `
+                <div class="comment-header">
+                    <span class="comment-user">${authorName}</span>
+                    <span>Just now</span>
+                </div>
+                <p class="comment-content">${text}</p>
+            `;
+
+            commentsList.insertBefore(newComment, commentsList.firstChild);
+            commentInput.value = "";
+
+            // Update comments count
+            const count = parseInt(commentCountEl.textContent) + 1;
+            commentCountEl.textContent = count;
+        });
+
+        // Initialize execution
+        updateHeaderAuth();
+        observer.observe(scrollTrigger);
+    </script>
+    <script src="../js/ai-widget.js"></script>
+</body>
+</html>
